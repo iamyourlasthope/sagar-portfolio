@@ -1,34 +1,42 @@
-import { ExternalLink, Eye, Heart, Share } from "lucide-react";
+import { Instagram, ExternalLink, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const PortfolioSection = () => {
   const projects = [
     {
-      title: "Amazon Mini TV Promotions",
-      description: "Created viral meme content that boosted engagement for Amazon Mini TV campaigns",
-      platform: "Instagram & YouTube",
-      role: "Meme Marketing Specialist",
-      type: "Brand Campaign",
-      engagement: "2.5M+ Views",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=300&fit=crop"
+      title: "Samsung Z Fold 6 Promo",
+      postId: "C_ncuShy80p",
+      description: "Creative meme content showcasing Samsung's latest foldable technology with viral appeal.",
+      platform: "Instagram",
+      type: "Brand Collaboration"
     },
     {
-      title: "Song Launch Campaigns",
-      description: "Viral reels and memes for music artists that generated massive social buzz",
-      platform: "Instagram Reels",
-      role: "Content Creator",
-      type: "Music Promotion",
-      engagement: "1.8M+ Views",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop"
+      title: "Hip Hop India on Amazon Mini TV",
+      postId: "CvhADjnMVmZ",
+      description: "Promotional content for Hip Hop India series on Amazon Mini TV platform.",
+      platform: "Instagram", 
+      type: "Entertainment Marketing"
     },
     {
-      title: "Mobile Product Campaigns",
-      description: "Funny, relatable content for smartphone launches that increased brand visibility",
-      platform: "Multi-Platform",
-      role: "Creative Director",
-      type: "Product Marketing",
-      engagement: "3.2M+ Views",
-      image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop"
+      title: "Hip Hop Promo on Amazon Mini TV",
+      postId: "CwnNDY0yaPv",
+      description: "Follow-up promotional campaign for Hip Hop content on Amazon Mini TV.",
+      platform: "Instagram",
+      type: "Series Promotion"
+    },
+    {
+      title: "XYXX Underwear Promo", 
+      postId: "C8l4BZ-SqAu",
+      description: "Humorous brand promotion for XYXX underwear leveraging meme culture.",
+      platform: "Instagram",
+      type: "Fashion Marketing"
+    },
+    {
+      title: "Leaked on Amazon Mini TV",
+      postId: "Cww-tOHyYQl", 
+      description: "Promotional content for 'Leaked' series on Amazon Mini TV platform.",
+      platform: "Instagram",
+      type: "Series Launch"
     }
   ];
 
@@ -44,24 +52,22 @@ const PortfolioSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="project-card rounded-xl p-6 group">
               <div className="relative overflow-hidden rounded-lg mb-6">
-                <img 
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                <iframe
+                  src={`https://www.instagram.com/p/${project.postId}/embed/`}
+                  width="100%"
+                  height="480"
+                  frameBorder="0"
+                  scrolling="no"
+                  allowTransparency={true}
+                  className="rounded-lg"
+                  title={project.title}
                 />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="flex space-x-3">
-                    <Button size="sm" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-                      <Eye className="w-4 h-4" />
-                    </Button>
-                    <Button size="sm" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
-                  </div>
+                <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Instagram className="w-5 h-5 text-white" />
                 </div>
               </div>
 
@@ -77,26 +83,20 @@ const PortfolioSection = () => {
                     <span className="text-accent">{project.platform}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Role:</span>
-                    <span>{project.role}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Type:</span>
                     <span>{project.type}</span>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between pt-4 border-t border-border">
-                  <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                    <div className="flex items-center space-x-1">
-                      <Eye className="w-4 h-4" />
-                      <span>{project.engagement}</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Heart className="w-4 h-4 text-muted-foreground hover:text-red-500 cursor-pointer transition-colors" />
-                    <Share className="w-4 h-4 text-muted-foreground hover:text-accent cursor-pointer transition-colors" />
-                  </div>
+                <div className="flex items-center justify-center pt-4 border-t border-border">
+                  <Button 
+                    onClick={() => window.open(`https://www.instagram.com/p/${project.postId}/`, '_blank')}
+                    variant="outline" 
+                    className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View on Instagram
+                  </Button>
                 </div>
               </div>
             </div>
