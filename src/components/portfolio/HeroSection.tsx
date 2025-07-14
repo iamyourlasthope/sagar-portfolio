@@ -1,6 +1,6 @@
 import { Instagram, Youtube, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import sagarProfile from "@/assets/sagar-profile.jpg";
+import sagarProfile from "@/assets/sagar-real-profile.png";
 
 const HeroSection = () => {
   const scrollToPortfolio = () => {
