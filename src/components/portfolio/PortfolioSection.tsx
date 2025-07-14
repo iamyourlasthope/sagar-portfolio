@@ -1,7 +1,10 @@
-import { Instagram, ExternalLink, Play } from "lucide-react";
+import { Instagram, ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const PortfolioSection = () => {
+  const [showAll, setShowAll] = useState(false);
+  
   const projects = [
     {
       title: "Samsung Z Fold 6 Promo",
@@ -40,6 +43,13 @@ const PortfolioSection = () => {
     }
   ];
 
+  // Top 4 projects to show initially
+  const topProjects = ["Samsung Z Fold 6 Promo", "Hip Hop India on Amazon Mini TV", "XYXX Underwear Promo", "Leaked on Amazon Mini TV"];
+  
+  const displayedProjects = showAll 
+    ? projects 
+    : projects.filter(project => topProjects.includes(project.title));
+
   return (
     <section id="portfolio" className="py-20 px-6 bg-card/20">
       <div className="container mx-auto">
@@ -53,7 +63,7 @@ const PortfolioSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <div key={index} className="project-card rounded-xl p-6 group">
               <div className="relative overflow-hidden rounded-lg mb-6">
                 <iframe
@@ -104,8 +114,21 @@ const PortfolioSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button className="glow-effect bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-3 rounded-xl">
-            View All Projects
+          <Button 
+            onClick={() => setShowAll(!showAll)}
+            className="glow-effect bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-3 rounded-xl"
+          >
+            {showAll ? (
+              <>
+                <ChevronUp className="w-4 h-4 mr-2" />
+                Show Top Projects
+              </>
+            ) : (
+              <>
+                <ChevronDown className="w-4 h-4 mr-2" />
+                View All Projects
+              </>
+            )}
           </Button>
         </div>
       </div>
