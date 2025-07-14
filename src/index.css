@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Modern dark portfolio design system for Sagar Singh */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark theme base colors */
+    --background: 220 13% 9%;
+    --foreground: 210 20% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 13% 11%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 13% 11%;
+    --popover-foreground: 210 20% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Accent colors - Neon green primary */
+    --primary: 142 76% 36%;
+    --primary-foreground: 220 13% 9%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 210 20% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 13% 15%;
+    --muted-foreground: 215 16% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 220 13% 9%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 15%;
+    --input: 220 13% 15%;
+    --ring: 142 76% 36%;
 
-    --radius: 0.5rem;
+    /* Design system tokens */
+    --radius: 0.75rem;
+    
+    /* Custom portfolio colors */
+    --neon-green: 142 76% 36%;
+    --neon-orange: 25 95% 53%;
+    --charcoal: 220 13% 9%;
+    --dark-grey: 220 13% 11%;
+    --light-grey: 210 20% 95%;
+    --accent-glow: 142 76% 36%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--neon-green)), hsl(var(--neon-orange)));
+    --gradient-dark: linear-gradient(135deg, hsl(var(--charcoal)), hsl(var(--dark-grey)));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--neon-green) / 0.1), hsl(var(--neon-orange) / 0.1));
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Shadows */
+    --shadow-neon: 0 0 20px hsl(var(--neon-green) / 0.3);
+    --shadow-glow: 0 10px 40px hsl(var(--neon-green) / 0.2);
+    --shadow-card: 0 4px 20px hsl(220 13% 5% / 0.5);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +124,121 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Portfolio-specific components */
+  .hero-gradient {
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .glow-effect {
+    box-shadow: var(--shadow-neon);
+    transition: var(--transition-smooth);
+  }
+  
+  .glow-effect:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+  
+  .profile-glow {
+    position: relative;
+  }
+  
+  .profile-glow::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.7;
+    animation: pulse 2s infinite;
+  }
+  
+  .stats-card {
+    background: var(--gradient-glow);
+    border: 1px solid hsl(var(--border));
+    backdrop-filter: blur(10px);
+    transition: var(--transition-bounce);
+  }
+  
+  .stats-card:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-card);
+  }
+  
+  .project-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    transition: var(--transition-smooth);
+    overflow: hidden;
+  }
+  
+  .project-card:hover {
+    border-color: hsl(var(--accent));
+    box-shadow: var(--shadow-card);
+    transform: translateY(-4px);
+  }
+  
+  .service-glow {
+    background: linear-gradient(135deg, 
+      hsl(var(--card)) 0%, 
+      hsl(var(--accent) / 0.05) 100%
+    );
+    border: 1px solid hsl(var(--border));
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .service-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent, 
+      hsl(var(--accent) / 0.1), 
+      transparent
+    );
+    transition: left 0.5s;
+  }
+  
+  .service-glow:hover::before {
+    left: 100%;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+  
+  .scroll-smooth {
+    scroll-behavior: smooth;
   }
 }
