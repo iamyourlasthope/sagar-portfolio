@@ -31,34 +31,6 @@ const AboutSection = () => {
     "Social Media Management"
   ];
 
-  const timeline = [
-    {
-      year: "2019",
-      title: "Started Content Creation",
-      description: "Began creating memes and video content"
-    },
-    {
-      year: "2020",
-      title: "First Brand Collaboration",
-      description: "Worked with local brands on social campaigns"
-    },
-    {
-      year: "2021",
-      title: "50K Milestone",
-      description: "Reached 50K followers across platforms"
-    },
-    {
-      year: "2022",
-      title: "Amazon Partnership",
-      description: "Collaborated with Amazon Prime & Mini TV"
-    },
-    {
-      year: "2024",
-      title: "100K+ Community",
-      description: "Built a thriving community of 100K+ followers"
-    }
-  ];
-
   return (
     <section id="about" className="py-20 px-6">
       <div className="container mx-auto">
@@ -73,14 +45,14 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Animated Image */}
-          <div className="lg:col-span-1 flex justify-center">
+          <div className="flex justify-center">
             <img
               ref={imageRef}
               src={aboutArtwork}
               alt="About Me Artwork"
-              className={`w-64 h-64 object-contain transition-all duration-[800ms] ease-out ${
+              className={`w-80 h-80 object-contain transition-all duration-[800ms] ease-out ${
                 isImageVisible
                   ? 'translate-x-0 opacity-100 scale-105'
                   : '-translate-x-16 opacity-0 scale-100'
@@ -89,7 +61,7 @@ const AboutSection = () => {
           </div>
 
           {/* Skills */}
-          <div className="lg:col-span-1 space-y-8">
+          <div className="space-y-8">
             <h3 className="text-2xl font-bold mb-6">Skills & Expertise</h3>
             <div className="space-y-4">
               {skills.map((skill, index) => (
@@ -98,33 +70,6 @@ const AboutSection = () => {
                   <span className="text-lg">{skill}</span>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* Timeline */}
-          <div className="lg:col-span-1 space-y-8">
-            <h3 className="text-2xl font-bold mb-6">Career Journey</h3>
-            <div className="relative max-h-60 overflow-hidden">
-              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-accent"></div>
-              {timeline.slice(0, 3).map((item, index) => (
-                <div key={index} className="relative flex items-start space-x-6 pb-6">
-                  <div className="relative z-10 w-6 h-6 bg-accent rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-background rounded-full"></div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-3 mb-1">
-                      <span className="text-accent font-bold text-sm">{item.year}</span>
-                      <h4 className="text-base font-semibold">{item.title}</h4>
-                    </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-              <div className="text-center mt-4">
-                <span className="text-xs text-muted-foreground bg-background/80 px-3 py-1 rounded-full">
-                  + {timeline.length - 3} more milestones
-                </span>
-              </div>
             </div>
           </div>
         </div>
