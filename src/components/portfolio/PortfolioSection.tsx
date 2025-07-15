@@ -43,94 +43,101 @@ const PortfolioSection = () => {
     }
   ];
 
-  // Top 4 projects to show initially
-  const topProjects = ["Samsung Z Fold 6 Promo", "Hip Hop India on Amazon Mini TV", "XYXX Underwear Promo", "Leaked on Amazon Mini TV"];
+  // Top 3 projects to show initially  
+  const topProjects = ["Samsung Z Fold 6 Promo", "Hip Hop India on Amazon Mini TV", "XYXX Underwear Promo"];
   
   const displayedProjects = showAll 
     ? projects 
     : projects.filter(project => topProjects.includes(project.title));
 
   return (
-    <section id="portfolio" className="py-20 px-6 bg-card/20">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+    <section id="portfolio" className="py-24 px-6 lg:px-8 bg-card/20">
+      <div className="container mx-auto max-w-7xl">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl lg:text-6xl font-bold mb-8 tracking-tight">
             Featured <span className="text-gradient">Projects</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             From viral memes to brand campaigns, here's how I've helped brands connect with millions of users
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        {/* Project Grid - Modern uniform cards */}
+        <div className={`grid gap-8 ${showAll ? 'md:grid-cols-2 xl:grid-cols-3' : 'md:grid-cols-2 lg:grid-cols-3'} ${!showAll && displayedProjects.length === 3 ? 'lg:grid-cols-3' : ''}`}>
           {displayedProjects.map((project, index) => (
-            <div key={index} className="project-card rounded-xl p-6 group">
-              <div className="relative overflow-hidden rounded-lg mb-6">
+            <div key={index} className="project-card rounded-3xl p-8 group h-full flex flex-col">
+              {/* Video Container - Fixed aspect ratio */}
+              <div className="relative overflow-hidden rounded-2xl mb-6 bg-black/50 aspect-[4/5]">
                 <iframe
                   src={`https://www.instagram.com/p/${project.postId}/embed/`}
                   width="100%"
-                  height="480"
+                  height="100%"
                   frameBorder="0"
                   scrolling="no"
                   allowTransparency={true}
-                  className="rounded-lg"
+                  className="rounded-2xl"
                   title={project.title}
+                  loading="lazy"
                 />
-                <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm rounded-full p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
                   <Instagram className="w-5 h-5 text-white" />
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground">{project.description}</p>
+              {/* Content - Flexible height */}
+              <div className="space-y-6 flex-1 flex flex-col">
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-4 leading-tight">{project.title}</h3>
+                  <p className="text-muted-foreground text-base leading-relaxed line-clamp-3">{project.description}</p>
                 </div>
 
-                <div className="space-y-2">
+                {/* Metadata */}
+                <div className="space-y-3 py-4 border-t border-border/50">
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Platform:</span>
-                    <span className="text-accent">{project.platform}</span>
+                    <span className="text-muted-foreground font-medium">Platform:</span>
+                    <span className="text-accent font-semibold">{project.platform}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Type:</span>
-                    <span>{project.type}</span>
+                    <span className="text-muted-foreground font-medium">Type:</span>
+                    <span className="font-semibold">{project.type}</span>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-center pt-4 border-t border-border">
-                  <Button 
-                    onClick={() => window.open(`https://www.instagram.com/p/${project.postId}/`, '_blank')}
-                    variant="outline" 
-                    className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View on Instagram
-                  </Button>
-                </div>
+                {/* CTA Button */}
+                <Button 
+                  onClick={() => window.open(`https://www.instagram.com/p/${project.postId}/`, '_blank')}
+                  variant="outline" 
+                  className="w-full border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground rounded-xl py-3 font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  View on Instagram
+                </Button>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button 
-            onClick={() => setShowAll(!showAll)}
-            className="glow-effect bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-3 rounded-xl"
-          >
-            {showAll ? (
-              <>
-                <ChevronUp className="w-4 h-4 mr-2" />
-                Show Top Projects
-              </>
-            ) : (
-              <>
-                <ChevronDown className="w-4 h-4 mr-2" />
-                View All Projects
-              </>
-            )}
-          </Button>
-        </div>
+        {/* Show More/Less Button */}
+        {projects.length > 3 && (
+          <div className="text-center mt-16">
+            <Button 
+              onClick={() => setShowAll(!showAll)}
+              className="glow-effect bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-10 py-4 rounded-2xl text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              {showAll ? (
+                <>
+                  <ChevronUp className="w-5 h-5 mr-3" />
+                  Show Top Projects
+                </>
+              ) : (
+                <>
+                  <ChevronDown className="w-5 h-5 mr-3" />
+                  Show More Projects
+                </>
+              )}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
