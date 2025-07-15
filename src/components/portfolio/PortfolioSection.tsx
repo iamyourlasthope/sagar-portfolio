@@ -40,6 +40,13 @@ const PortfolioSection = () => {
       description: "Promotional content for 'Leaked' series on Amazon Mini TV platform.",
       platform: "Instagram",
       type: "Series Launch"
+    },
+    {
+      title: "Kisi ka Bhai Kisi ki Jaan Promo",
+      postId: "Crn9A3LOM7X",
+      description: "Promotional content for the Bollywood movie featuring Salman Khan.",
+      platform: "Instagram",
+      type: "Entertainment"
     }
   ];
 
