@@ -43,7 +43,7 @@ const HeroSection = () => {
                 Creative Mind behing many Viral Contents.
               </h2>
               <p className="text-xl lg:text-2xl text-blue-200">
-                with <span className="text-blue-400 font-bold">100K+ Followers</span>
+                with <span className="text-blue-400 font-bold">Meme Marketer &amp; Digital Creator</span>
               </p>
             </div>
 
