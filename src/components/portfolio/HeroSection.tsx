@@ -35,45 +35,45 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="space-y-10 text-center lg:text-left">
             <div className="space-y-6">
-              <p className="text-muted-foreground text-lg font-medium tracking-wide">Hi, I'm</p>
+              <p className="text-blue-200 text-lg font-medium tracking-wide">Hi, I'm</p>
               <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold leading-[0.9] tracking-tight">
-                <span className="text-gradient">Sagar Singh</span>
+                <span className="text-white">Sagar Singh</span>
               </h1>
-              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-foreground">
+              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-blue-100">
                 Meme Marketer & Digital Creator
               </h2>
-              <p className="text-xl lg:text-2xl text-muted-foreground">
-                with <span className="text-accent font-bold">100K+ Followers</span>
+              <p className="text-xl lg:text-2xl text-blue-200">
+                with <span className="text-blue-400 font-bold">100K+ Followers</span>
               </p>
             </div>
 
             {/* Social Stats - Now Clickable */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="https://www.instagram.com/sagar.edits/" target="_blank" rel="noopener noreferrer" className="stats-card rounded-2xl p-6 flex items-center space-x-4 group cursor-pointer hover:scale-105 transition-all duration-300">
-                <Instagram className="w-7 h-7 text-accent group-hover:scale-110 transition-transform" />
+              <a href="https://www.instagram.com/sagar.edits/" target="_blank" rel="noopener noreferrer" className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 flex items-center space-x-4 group cursor-pointer hover:bg-white/15 transition-all duration-300">
+                <Instagram className="w-7 h-7 text-blue-400 group-hover:scale-110 transition-transform" />
                 <div className="text-left">
-                  <p className="text-sm text-muted-foreground">Instagram</p>
-                  <p className="font-bold text-xl text-foreground">100K+</p>
+                  <p className="text-sm text-blue-300">Instagram</p>
+                  <p className="font-bold text-xl text-white">100K+</p>
                 </div>
-                <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
+                <ExternalLink className="w-4 h-4 text-blue-300 opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
               </a>
-              <a href="https://youtube.com/sagareditsofficial" target="_blank" rel="noopener noreferrer" className="stats-card rounded-2xl p-6 flex items-center space-x-4 group cursor-pointer hover:scale-105 transition-all duration-300">
-                <Youtube className="w-7 h-7 text-accent group-hover:scale-110 transition-transform" />
+              <a href="https://youtube.com/sagareditsofficial" target="_blank" rel="noopener noreferrer" className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 flex items-center space-x-4 group cursor-pointer hover:bg-white/15 transition-all duration-300">
+                <Youtube className="w-7 h-7 text-blue-400 group-hover:scale-110 transition-transform" />
                 <div className="text-left">
-                  <p className="text-sm text-muted-foreground">YouTube</p>
-                  <p className="font-bold text-xl text-foreground">100K+</p>
+                  <p className="text-sm text-blue-300">YouTube</p>
+                  <p className="font-bold text-xl text-white">100K+</p>
                 </div>
-                <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
+                <ExternalLink className="w-4 h-4 text-blue-300 opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
               </a>
             </div>
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
-              <Button onClick={scrollToPortfolio} className="glow-effect bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-10 py-7 text-lg rounded-2xl shadow-lg">
+              <Button onClick={scrollToPortfolio} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-10 py-7 text-lg rounded-2xl shadow-lg transition-all duration-300">
                 View My Work
                 <ArrowDown className="ml-3 w-5 h-5" />
               </Button>
-              <Button variant="outline" className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-10 py-7 text-lg rounded-2xl transition-all duration-300 shadow-lg">
+              <Button variant="outline" className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-10 py-7 text-lg rounded-2xl transition-all duration-300 shadow-lg bg-transparent">
                 Get In Touch
               </Button>
             </div>

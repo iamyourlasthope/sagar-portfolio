@@ -18,8 +18,6 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-accent to-bright-blue flex items-center justify-center">
-            </div>
             <span className="text-xl font-bold">Sagar Edits</span>
           </div>
           
