@@ -35,14 +35,14 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="space-y-10 text-center lg:text-left">
             <div className="space-y-6">
-              <p className="text-muted-foreground text-lg font-medium tracking-wide">Hi, I'm</p>
+              <p className="text-muted-foreground/80 text-lg font-medium tracking-wide">Hi, I'm</p>
               <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold leading-[0.9] tracking-tight">
                 <span className="text-gradient">Sagar Singh</span>
               </h1>
-              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-foreground">
+              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-foreground/90">
                 Meme Marketer & Digital Creator
               </h2>
-              <p className="text-xl lg:text-2xl text-muted-foreground">
+              <p className="text-xl lg:text-2xl text-muted-foreground/80">
                 with <span className="text-accent font-bold">100K+ Followers</span>
               </p>
             </div>
@@ -52,16 +52,16 @@ const HeroSection = () => {
               <a href="https://www.instagram.com/sagar.edits/" target="_blank" rel="noopener noreferrer" className="stats-card rounded-2xl p-6 flex items-center space-x-4 group cursor-pointer hover:scale-105 transition-all duration-300">
                 <Instagram className="w-7 h-7 text-accent group-hover:scale-110 transition-transform" />
                 <div className="text-left">
-                  <p className="text-sm text-muted-foreground">Instagram</p>
-                  <p className="font-bold text-xl">100K+</p>
+                  <p className="text-sm text-muted-foreground/70">Instagram</p>
+                  <p className="font-bold text-xl text-foreground/90">100K+</p>
                 </div>
                 <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
               </a>
               <a href="https://youtube.com/sagareditsofficial" target="_blank" rel="noopener noreferrer" className="stats-card rounded-2xl p-6 flex items-center space-x-4 group cursor-pointer hover:scale-105 transition-all duration-300">
                 <Youtube className="w-7 h-7 text-accent group-hover:scale-110 transition-transform" />
                 <div className="text-left">
-                  <p className="text-sm text-muted-foreground">YouTube</p>
-                  <p className="font-bold text-xl">100K+</p>
+                  <p className="text-sm text-muted-foreground/70">YouTube</p>
+                  <p className="font-bold text-xl text-foreground/90">100K+</p>
                 </div>
                 <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
               </a>
@@ -94,9 +94,9 @@ const HeroSection = () => {
               </div>
               {/* Modern floating elements */}
               <div className="absolute -top-6 -right-6 w-12 h-12 bg-accent rounded-full animate-pulse shadow-lg"></div>
-              <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-[hsl(var(--neon-red))] rounded-full animate-pulse delay-1000 shadow-lg"></div>
-              <div className="absolute top-1/2 -left-10 w-6 h-6 bg-accent rounded-full animate-pulse delay-500 shadow-lg"></div>
-              <div className="absolute top-1/4 -right-4 w-4 h-4 bg-[hsl(var(--bright-orange))] rounded-full animate-pulse delay-700 shadow-lg"></div>
+              <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-electric-blue rounded-full animate-pulse delay-1000 shadow-lg"></div>
+              <div className="absolute top-1/2 -left-10 w-6 h-6 bg-accent/70 rounded-full animate-pulse delay-500 shadow-lg"></div>
+              <div className="absolute top-1/4 -right-4 w-4 h-4 bg-bright-blue rounded-full animate-pulse delay-700 shadow-lg"></div>
             </div>
           </div>
         </div>

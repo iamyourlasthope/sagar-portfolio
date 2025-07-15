@@ -4,7 +4,7 @@ import aboutArtwork from "@/assets/about-artwork.png";
 
 const AboutSection = () => {
   const [isImageVisible, setIsImageVisible] = useState(false);
-  const imageRef = useRef<HTMLImageElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -47,17 +47,25 @@ const AboutSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Animated Image */}
-          <div className="flex justify-center">
-            <img
-              ref={imageRef}
-              src={aboutArtwork}
-              alt="About Me Artwork"
-              className={`w-80 h-80 object-contain transition-all duration-[800ms] ease-out ${
-                isImageVisible
-                  ? 'translate-x-0 opacity-100 scale-105'
-                  : '-translate-x-16 opacity-0 scale-100'
-              }`}
-            />
+          <div 
+            ref={imageRef}
+            className={`flex justify-center transition-all duration-[800ms] ease-out ${
+              isImageVisible
+                ? 'translate-x-0 opacity-100 scale-100'
+                : '-translate-x-16 opacity-0 scale-95'
+            }`}
+          >
+            <div className="relative">
+              <img
+                src={aboutArtwork}
+                alt="About Me Artwork"
+                className="w-80 h-80 object-contain animate-float"
+              />
+              {/* Modern floating elements similar to hero */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-accent/70 rounded-full animate-pulse shadow-lg"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-[hsl(var(--electric-blue))] rounded-full animate-pulse delay-1000 shadow-lg"></div>
+              <div className="absolute top-1/2 -left-8 w-4 h-4 bg-accent/50 rounded-full animate-pulse delay-500 shadow-lg"></div>
+            </div>
           </div>
 
           {/* Skills */}
