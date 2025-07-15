@@ -1,6 +1,28 @@
 import { CheckCircle } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import aboutArtwork from "@/assets/about-artwork.png";
 
 const AboutSection = () => {
+  const [isImageVisible, setIsImageVisible] = useState(false);
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isImageVisible) {
+          setIsImageVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isImageVisible]);
+
   const skills = [
     "Video Editing (Adobe Premiere Pro, After Effects)",
     "Meme Marketing",
@@ -51,9 +73,23 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-3 gap-12 items-center">
+          {/* Animated Image */}
+          <div className="lg:col-span-1 flex justify-center">
+            <img
+              ref={imageRef}
+              src={aboutArtwork}
+              alt="About Me Artwork"
+              className={`w-64 h-64 object-contain transition-all duration-[800ms] ease-out ${
+                isImageVisible
+                  ? 'translate-x-0 opacity-100 scale-105'
+                  : '-translate-x-16 opacity-0 scale-100'
+              }`}
+            />
+          </div>
+
           {/* Skills */}
-          <div className="space-y-8">
+          <div className="lg:col-span-1 space-y-8">
             <h3 className="text-2xl font-bold mb-6">Skills & Expertise</h3>
             <div className="space-y-4">
               {skills.map((skill, index) => (
@@ -66,7 +102,7 @@ const AboutSection = () => {
           </div>
 
           {/* Timeline */}
-          <div className="space-y-8">
+          <div className="lg:col-span-1 space-y-8">
             <h3 className="text-2xl font-bold mb-6">Career Journey</h3>
             <div className="relative">
               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-accent"></div>
