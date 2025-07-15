@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Mail, Phone, Instagram, Youtube, Linkedin, Send } from "lucide-react";
+import { Mail, Phone, Instagram, Youtube, Linkedin, Send, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -11,16 +12,40 @@ const ContactSection = () => {
     email: "",
     message: ""
   });
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon!",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    setIsLoading(true);
+
+    try {
+      await emailjs.send(
+        'service_vs8acf1', // Service ID
+        'template_p2m3w3q', // Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        'AzPSYZyGpuQPCEpjd' // Public Key
+      );
+
+      toast({
+        title: "Message Sent!",
+        description: "Thanks for reaching out. I'll get back to you soon!",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Failed to Send",
+        description: "Something went wrong. Please try again or contact me directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -103,10 +128,15 @@ const ContactSection = () => {
               </div>
               <Button 
                 type="submit"
-                className="glow-effect w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-3 rounded-xl"
+                disabled={isLoading}
+                className="glow-effect w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-3 rounded-xl disabled:opacity-50"
               >
-                <Send className="mr-2 w-5 h-5" />
-                Send Message
+                {isLoading ? (
+                  <Loader2 className="mr-2 w-5 h-5 animate-spin" />
+                ) : (
+                  <Send className="mr-2 w-5 h-5" />
+                )}
+                {isLoading ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
