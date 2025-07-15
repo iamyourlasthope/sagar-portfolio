@@ -33,7 +33,10 @@ const HeroSection = () => {
   };
 
   const handleGetInTouch = () => {
-    navigate("/lets-connect");
+    const element = document.getElementById("contact");
+    element?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
   return <section id="home" className="section-hero min-h-screen flex items-center justify-center pt-20 px-6 lg:px-8 relative">
       <div className="container mx-auto max-w-7xl">
