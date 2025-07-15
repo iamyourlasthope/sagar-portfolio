@@ -40,7 +40,7 @@ const HeroSection = () => {
                 <span className="text-white">Sagar Singh</span>
               </h1>
               <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-blue-100">
-                Meme Marketer & Digital Creator
+                Creative Mind behing many Viral Contents.
               </h2>
               <p className="text-xl lg:text-2xl text-blue-200">
                 with <span className="text-blue-400 font-bold">100K+ Followers</span>
