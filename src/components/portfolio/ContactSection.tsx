@@ -77,7 +77,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6 bg-card/20">
+    <section id="contact" className="section-contact py-20 px-6 relative z-10">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
@@ -147,14 +147,14 @@ const ContactSection = () => {
             
             {/* Direct Contact */}
             <div className="space-y-4">
-              <div className="flex items-center space-x-4 p-4 rounded-xl bg-background border border-border">
+              <div className="modern-card flex items-center space-x-4 p-4 rounded-xl">
                 <Mail className="w-6 h-6 text-accent" />
                 <div>
                   <p className="font-semibold">Email</p>
                   <p className="text-muted-foreground">contactsagaredits@gmail.com</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4 p-4 rounded-xl bg-background border border-border">
+              <div className="modern-card flex items-center space-x-4 p-4 rounded-xl">
                 <Phone className="w-6 h-6 text-accent" />
                 <div>
                   <p className="font-semibold">Phone</p>
@@ -173,7 +173,7 @@ const ContactSection = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-4 p-3 rounded-lg bg-background border border-border hover:border-accent transition-colors group"
+                    className="modern-card flex items-center space-x-4 p-3 rounded-lg hover:border-accent transition-colors group"
                   >
                     <social.icon className="w-6 h-6 text-accent" />
                     <div>

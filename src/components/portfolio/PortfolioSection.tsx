@@ -51,7 +51,7 @@ const PortfolioSection = () => {
     : projects.filter(project => topProjects.includes(project.title));
 
   return (
-    <section id="portfolio" className="py-24 px-6 lg:px-8 bg-gradient-to-br from-background via-card/30 to-muted/20">
+    <section id="portfolio" className="section-portfolio py-24 px-6 lg:px-8 relative z-10">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-6xl font-bold mb-8 tracking-tight text-foreground">

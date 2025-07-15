@@ -49,10 +49,38 @@
     --light-grey: 210 20% 98%;
     --accent-glow: 212 80% 65%;
     
+    /* Section-specific color schemes */
+    --hero-primary: 220 100% 12%;
+    --hero-secondary: 230 60% 18%;
+    --hero-accent: 212 100% 50%;
+    
+    --about-primary: 200 60% 8%;
+    --about-secondary: 195 50% 12%;
+    --about-accent: 190 100% 55%;
+    
+    --portfolio-primary: 210 70% 10%;
+    --portfolio-secondary: 215 55% 15%;
+    --portfolio-accent: 200 100% 60%;
+    
+    --services-primary: 240 50% 8%;
+    --services-secondary: 235 45% 12%;
+    --services-accent: 220 100% 55%;
+    
+    --contact-primary: 200 80% 6%;
+    --contact-secondary: 205 60% 10%;
+    --contact-accent: 180 100% 50%;
+    
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--navy-blue)), hsl(var(--bright-blue)));
     --gradient-dark: linear-gradient(135deg, hsl(var(--charcoal)), hsl(var(--dark-grey)));
     --gradient-glow: linear-gradient(135deg, hsl(var(--navy-blue) / 0.1), hsl(var(--deep-blue) / 0.1));
+    
+    /* Section gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--hero-primary)), hsl(var(--hero-secondary)));
+    --gradient-about: linear-gradient(135deg, hsl(var(--about-primary)), hsl(var(--about-secondary)));
+    --gradient-portfolio: linear-gradient(135deg, hsl(var(--portfolio-primary)), hsl(var(--portfolio-secondary)));
+    --gradient-services: linear-gradient(135deg, hsl(var(--services-primary)), hsl(var(--services-secondary)));
+    --gradient-contact: linear-gradient(135deg, hsl(var(--contact-primary)), hsl(var(--contact-secondary)));
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -222,6 +250,113 @@
   
   .service-glow:hover::before {
     left: 100%;
+  }
+
+  /* Section-specific backgrounds */
+  .section-hero {
+    background: var(--gradient-hero);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, hsl(var(--hero-accent) / 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, hsl(var(--electric-blue) / 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  
+  .section-about {
+    background: var(--gradient-about);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, hsl(var(--about-accent) / 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, hsl(var(--bright-blue) / 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  
+  .section-portfolio {
+    background: var(--gradient-portfolio);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section-portfolio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, hsl(var(--portfolio-accent) / 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 10% 90%, hsl(var(--deep-blue) / 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  
+  .section-services {
+    background: var(--gradient-services);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section-services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 80% 20%, hsl(var(--services-accent) / 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, hsl(var(--navy-blue) / 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  
+  .section-contact {
+    background: var(--gradient-contact);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 40% 20%, hsl(var(--contact-accent) / 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 60% 80%, hsl(var(--electric-blue) / 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Modern card styles */
+  .modern-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: var(--transition-smooth);
+  }
+  
+  .modern-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   }
 }
 

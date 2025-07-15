@@ -29,7 +29,7 @@ const HeroSection = () => {
       behavior: "smooth"
     });
   };
-  return <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6 lg:px-8">
+  return <section id="home" className="section-hero min-h-screen flex items-center justify-center pt-20 px-6 lg:px-8 relative z-10">
       <div className="container mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}

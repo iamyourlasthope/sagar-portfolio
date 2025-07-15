@@ -14,11 +14,11 @@ const Navigation = () => {
       behavior: "smooth"
     });
   };
-  return <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"}`}>
+  return <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-background/90 backdrop-blur-lg border-b border-border/50 shadow-lg" : "bg-transparent"}`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[hsl(var(--neon-green))] to-[hsl(var(--neon-orange))] flex items-center justify-center">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-accent to-bright-blue flex items-center justify-center">
               <span className="text-background font-bold">S</span>
             </div>
             <span className="text-xl font-bold">Sagar Edits</span>
