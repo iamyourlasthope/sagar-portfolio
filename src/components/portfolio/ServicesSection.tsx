@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Zap, TrendingUp, Video, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import CampaignSection from "./CampaignSection";
 
 const ServicesSection = () => {
+  const [isCampaignOpen, setIsCampaignOpen] = useState(false);
   return (
     <section id="services" className="py-20 px-6">
       <div className="container mx-auto">
@@ -41,7 +44,10 @@ const ServicesSection = () => {
                     <span>Custom Meme Design</span>
                   </div>
                 </div>
-                <Button className="glow-effect bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-2 rounded-lg">
+                <Button 
+                  onClick={() => setIsCampaignOpen(true)}
+                  className="glow-effect bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-2 rounded-lg"
+                >
                   Start Your Campaign
                 </Button>
               </div>
@@ -66,6 +72,11 @@ const ServicesSection = () => {
           </div>
         </div>
       </div>
+
+      <CampaignSection 
+        isOpen={isCampaignOpen} 
+        onClose={() => setIsCampaignOpen(false)} 
+      />
     </section>
   );
 };
