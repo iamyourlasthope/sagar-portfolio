@@ -28,20 +28,18 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
 
     try {
       const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        company: formData.company,
+        user_name: formData.name,
+        user_email: formData.email,
+        company_name: formData.company,
         campaign_type: formData.campaignType,
-        message: formData.description,
-        to_name: "Sagar Singh",
-        subject: `New Campaign Request from ${formData.name}`,
+        campaign_description: formData.description,
       };
 
       await emailjs.send(
-        'service_gf7dqzg',
-        'template_s09g5vp',
+        'service_vs8acf1',
+        'template_axt6eki',
         templateParams,
-        '4_w4oVfKG-0YfJE-v'
+        'AzPSYZyGpuQPCEpjd'
       );
 
       toast({
