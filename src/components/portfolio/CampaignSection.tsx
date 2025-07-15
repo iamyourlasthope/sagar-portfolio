@@ -17,7 +17,6 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
     email: "",
     company: "",
     campaignType: "",
-    budget: "",
     timeline: "",
     description: ""
   });
@@ -34,7 +33,6 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
         from_email: formData.email,
         company: formData.company,
         campaign_type: formData.campaignType,
-        budget: formData.budget,
         timeline: formData.timeline,
         message: formData.description,
         to_name: "Sagar Singh",
@@ -58,7 +56,6 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
         email: "",
         company: "",
         campaignType: "",
-        budget: "",
         timeline: "",
         description: ""
       });
@@ -182,40 +179,21 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium mb-2">Budget Range</label>
-                <select
-                  name="budget"
-                  value={formData.budget}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-input bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-transparent"
-                >
-                  <option value="">Select budget range</option>
-                  <option value="under-5k">Under $5,000</option>
-                  <option value="5k-10k">$5,000 - $10,000</option>
-                  <option value="10k-25k">$10,000 - $25,000</option>
-                  <option value="25k-50k">$25,000 - $50,000</option>
-                  <option value="50k-plus">$50,000+</option>
-                  <option value="discuss">Let's discuss</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">Timeline</label>
-                <select
-                  name="timeline"
-                  value={formData.timeline}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-input bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-transparent"
-                >
-                  <option value="">Select timeline</option>
-                  <option value="asap">ASAP</option>
-                  <option value="1-week">Within 1 week</option>
-                  <option value="2-weeks">Within 2 weeks</option>
-                  <option value="1-month">Within 1 month</option>
-                  <option value="flexible">Flexible</option>
-                </select>
-              </div>
+            <div>
+              <label className="block text-sm font-medium mb-2">Timeline</label>
+              <select
+                name="timeline"
+                value={formData.timeline}
+                onChange={handleChange}
+                className="w-full p-3 border border-input bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-transparent"
+              >
+                <option value="">Select timeline</option>
+                <option value="asap">ASAP</option>
+                <option value="1-week">Within 1 week</option>
+                <option value="2-weeks">Within 2 weeks</option>
+                <option value="1-month">Within 1 month</option>
+                <option value="flexible">Flexible</option>
+              </select>
             </div>
 
             <div>
