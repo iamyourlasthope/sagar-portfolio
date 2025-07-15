@@ -9,7 +9,6 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-full bg-gradient-to-r from-accent to-bright-blue flex items-center justify-center">
-              <span className="text-background font-bold">S</span>
             </div>
             <span className="text-xl font-bold">Sagar Singh</span>
           </div>
