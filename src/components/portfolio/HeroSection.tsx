@@ -1,8 +1,10 @@
 import { Instagram, Youtube, ArrowDown, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import sagarHeroImage from "@/assets/sagar-hero-new.png";
 const HeroSection = () => {
+  const navigate = useNavigate();
   const [isHeroImageVisible, setIsHeroImageVisible] = useState(false);
   const heroImageRef = useRef<HTMLDivElement>(null);
 
@@ -29,6 +31,10 @@ const HeroSection = () => {
       behavior: "smooth"
     });
   };
+
+  const handleGetInTouch = () => {
+    navigate("/lets-connect");
+  };
   return <section id="home" className="section-hero min-h-screen flex items-center justify-center pt-20 px-6 lg:px-8 relative">
       <div className="container mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -42,9 +48,6 @@ const HeroSection = () => {
               <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-blue-100">
                 Creative Mind behing many Viral Contents.
               </h2>
-              <p className="text-xl lg:text-2xl text-blue-200">
-                <span className="text-blue-400 font-bold">Meme Marketer &amp; Digital Creator</span>
-              </p>
             </div>
 
             {/* Social Stats - Now Clickable */}
@@ -73,7 +76,7 @@ const HeroSection = () => {
                 View My Work
                 <ArrowDown className="ml-3 w-5 h-5" />
               </Button>
-              <Button variant="outline" className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-10 py-7 text-lg rounded-2xl transition-all duration-300 shadow-lg bg-transparent">
+              <Button onClick={handleGetInTouch} variant="outline" className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-10 py-7 text-lg rounded-2xl transition-all duration-300 shadow-lg bg-transparent">
                 Get In Touch
               </Button>
             </div>
