@@ -104,22 +104,27 @@ const AboutSection = () => {
           {/* Timeline */}
           <div className="lg:col-span-1 space-y-8">
             <h3 className="text-2xl font-bold mb-6">Career Journey</h3>
-            <div className="relative">
+            <div className="relative max-h-60 overflow-hidden">
               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-accent"></div>
-              {timeline.map((item, index) => (
-                <div key={index} className="relative flex items-start space-x-6 pb-8">
-                  <div className="relative z-10 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
-                    <div className="w-3 h-3 bg-background rounded-full"></div>
+              {timeline.slice(0, 3).map((item, index) => (
+                <div key={index} className="relative flex items-start space-x-6 pb-6">
+                  <div className="relative z-10 w-6 h-6 bg-accent rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-background rounded-full"></div>
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center space-x-3 mb-1">
-                      <span className="text-accent font-bold">{item.year}</span>
-                      <h4 className="text-lg font-semibold">{item.title}</h4>
+                      <span className="text-accent font-bold text-sm">{item.year}</span>
+                      <h4 className="text-base font-semibold">{item.title}</h4>
                     </div>
-                    <p className="text-muted-foreground">{item.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               ))}
+              <div className="text-center mt-4">
+                <span className="text-xs text-muted-foreground bg-background/80 px-3 py-1 rounded-full">
+                  + {timeline.length - 3} more milestones
+                </span>
+              </div>
             </div>
           </div>
         </div>

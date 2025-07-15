@@ -1,7 +1,28 @@
 import { Instagram, Youtube, ArrowDown, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect, useRef, useState } from "react";
 import sagarHeroImage from "@/assets/sagar-hero-new.png";
 const HeroSection = () => {
+  const [isHeroImageVisible, setIsHeroImageVisible] = useState(false);
+  const heroImageRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isHeroImageVisible) {
+          setIsHeroImageVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (heroImageRef.current) {
+      observer.observe(heroImageRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isHeroImageVisible]);
+
   const scrollToPortfolio = () => {
     const element = document.getElementById("portfolio");
     element?.scrollIntoView({
@@ -60,7 +81,14 @@ const HeroSection = () => {
 
           {/* Right Content - Hero Image */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative">
+            <div 
+              ref={heroImageRef}
+              className={`relative transition-all duration-[800ms] ease-out ${
+                isHeroImageVisible
+                  ? 'translate-x-0 opacity-100 scale-100'
+                  : '-translate-x-16 opacity-0 scale-95'
+              }`}
+            >
               <div className="profile-glow w-80 h-80 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] rounded-full overflow-hidden animate-float shadow-2xl">
                 <img src={sagarHeroImage} alt="Sagar Singh - Digital Content Creator" className="w-full h-full object-center object-cover" />
               </div>
