@@ -1,6 +1,6 @@
 import { Instagram, Youtube, ArrowDown, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import sagarHeroImage from "@/assets/sagar-hero-image.jpg";
+import sagarHeroImage from "@/assets/sagar-hero-new.png";
 const HeroSection = () => {
   const scrollToPortfolio = () => {
     const element = document.getElementById("portfolio");
@@ -66,9 +66,9 @@ const HeroSection = () => {
               </div>
               {/* Modern floating elements */}
               <div className="absolute -top-6 -right-6 w-12 h-12 bg-accent rounded-full animate-pulse shadow-lg"></div>
-              <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-[hsl(var(--neon-orange))] rounded-full animate-pulse delay-1000 shadow-lg"></div>
+              <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-[hsl(var(--neon-red))] rounded-full animate-pulse delay-1000 shadow-lg"></div>
               <div className="absolute top-1/2 -left-10 w-6 h-6 bg-accent rounded-full animate-pulse delay-500 shadow-lg"></div>
-              <div className="absolute top-1/4 -right-4 w-4 h-4 bg-[hsl(var(--neon-orange))] rounded-full animate-pulse delay-700 shadow-lg"></div>
+              <div className="absolute top-1/4 -right-4 w-4 h-4 bg-[hsl(var(--bright-orange))] rounded-full animate-pulse delay-700 shadow-lg"></div>
             </div>
           </div>
         </div>
