@@ -43,12 +43,9 @@ const PortfolioSection = () => {
     }
   ];
 
-  // Top 3 projects to show initially  
-  const topProjects = ["Samsung Z Fold 6 Promo", "Hip Hop India on Amazon Mini TV", "XYXX Underwear Promo"];
-  
   const displayedProjects = showAll 
     ? projects 
-    : projects.filter(project => topProjects.includes(project.title));
+    : projects.slice(0, 3);
 
   return (
     <section id="portfolio" className="section-portfolio py-24 px-6 lg:px-8 relative z-10">
