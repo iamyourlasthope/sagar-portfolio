@@ -6,64 +6,64 @@
 
 @layer base {
   :root {
-    /* Dark theme base colors */
-    --background: 220 13% 9%;
-    --foreground: 210 20% 95%;
+    /* Dark theme base colors - Navy Blue */
+    --background: 220 40% 8%;
+    --foreground: 210 20% 98%;
 
-    --card: 220 13% 11%;
-    --card-foreground: 210 20% 95%;
+    --card: 220 35% 12%;
+    --card-foreground: 210 20% 98%;
 
-    --popover: 220 13% 11%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 220 35% 12%;
+    --popover-foreground: 210 20% 98%;
 
-    /* Accent colors - Orange/Red theme */
-    --primary: 16 100% 66%;
+    /* Accent colors - Blue theme */
+    --primary: 212 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 13% 15%;
-    --secondary-foreground: 210 20% 95%;
+    --secondary: 220 30% 20%;
+    --secondary-foreground: 210 20% 98%;
 
-    --muted: 220 13% 15%;
+    --muted: 220 30% 20%;
     --muted-foreground: 215 16% 65%;
 
-    --accent: 16 100% 66%;
+    --accent: 212 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 15%;
-    --input: 220 13% 15%;
-    --ring: 16 100% 66%;
+    --border: 220 30% 20%;
+    --input: 220 30% 20%;
+    --ring: 212 100% 50%;
 
     /* Design system tokens */
     --radius: 0.75rem;
     
-    /* Custom portfolio colors - Orange/Red theme */
-    --neon-orange: 16 100% 66%;
-    --neon-red: 14 100% 57%;
-    --bright-orange: 12 100% 50%;
-    --deep-orange: 10 100% 45%;
-    --charcoal: 220 13% 9%;
-    --dark-grey: 220 13% 11%;
-    --light-grey: 210 20% 95%;
-    --accent-glow: 16 100% 75%;
+    /* Custom portfolio colors - Blue theme */
+    --navy-blue: 212 100% 50%;
+    --bright-blue: 200 100% 55%;
+    --deep-blue: 220 100% 45%;
+    --electric-blue: 190 100% 60%;
+    --charcoal: 220 40% 8%;
+    --dark-grey: 220 35% 12%;
+    --light-grey: 210 20% 98%;
+    --accent-glow: 212 80% 65%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--neon-orange)), hsl(var(--neon-red)));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--navy-blue)), hsl(var(--bright-blue)));
     --gradient-dark: linear-gradient(135deg, hsl(var(--charcoal)), hsl(var(--dark-grey)));
-    --gradient-glow: linear-gradient(135deg, hsl(var(--neon-orange) / 0.1), hsl(var(--deep-orange) / 0.1));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--navy-blue) / 0.1), hsl(var(--deep-blue) / 0.1));
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     
     /* Modern Shadows */
-    --shadow-neon: 0 0 30px hsl(var(--neon-orange) / 0.4);
-    --shadow-glow: 0 20px 60px hsl(var(--neon-orange) / 0.3);
-    --shadow-card: 0 8px 32px hsl(220 13% 5% / 0.6);
-    --shadow-soft: 0 4px 24px hsl(220 13% 5% / 0.3);
-    --shadow-minimal: 0 2px 12px hsl(220 13% 5% / 0.2);
+    --shadow-neon: 0 0 30px hsl(var(--navy-blue) / 0.4);
+    --shadow-glow: 0 20px 60px hsl(var(--navy-blue) / 0.3);
+    --shadow-card: 0 8px 32px hsl(220 40% 4% / 0.6);
+    --shadow-soft: 0 4px 24px hsl(220 40% 4% / 0.3);
+    --shadow-minimal: 0 2px 12px hsl(220 40% 4% / 0.2);
 
     --sidebar-background: 0 0% 98%;
 
