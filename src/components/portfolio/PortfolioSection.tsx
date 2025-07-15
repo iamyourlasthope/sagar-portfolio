@@ -78,6 +78,7 @@ const PortfolioSection = () => {
                   className="rounded-2xl"
                   title={project.title}
                   loading="lazy"
+                  allow="autoplay; encrypted-media"
                 />
                 <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm rounded-full p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
                   <Instagram className="w-5 h-5 text-white" />

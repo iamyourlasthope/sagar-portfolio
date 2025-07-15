@@ -61,7 +61,7 @@ const HeroSection = () => {
           {/* Right Content - Hero Image */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="profile-glow w-80 h-80 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] rounded-3xl overflow-hidden animate-float shadow-2xl">
+              <div className="profile-glow w-80 h-80 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] rounded-full overflow-hidden animate-float shadow-2xl">
                 <img src={sagarHeroImage} alt="Sagar Singh - Digital Content Creator" className="w-full h-full object-center object-cover" />
               </div>
               {/* Modern floating elements */}
