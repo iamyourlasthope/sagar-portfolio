@@ -1,15 +1,14 @@
 import { Instagram, Youtube, ArrowDown, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import sagarHeroImage from "@/assets/sagar-hero-image.jpg";
-
 const HeroSection = () => {
   const scrollToPortfolio = () => {
     const element = document.getElementById("portfolio");
-    element?.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6 lg:px-8">
+  return <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -29,12 +28,7 @@ const HeroSection = () => {
 
             {/* Social Stats - Now Clickable */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a 
-                href="https://www.instagram.com/sagar.edits/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="stats-card rounded-2xl p-6 flex items-center space-x-4 group cursor-pointer hover:scale-105 transition-all duration-300"
-              >
+              <a href="https://www.instagram.com/sagar.edits/" target="_blank" rel="noopener noreferrer" className="stats-card rounded-2xl p-6 flex items-center space-x-4 group cursor-pointer hover:scale-105 transition-all duration-300">
                 <Instagram className="w-7 h-7 text-accent group-hover:scale-110 transition-transform" />
                 <div className="text-left">
                   <p className="text-sm text-muted-foreground">Instagram</p>
@@ -42,12 +36,7 @@ const HeroSection = () => {
                 </div>
                 <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
               </a>
-              <a 
-                href="https://youtube.com/sagareditsofficial"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="stats-card rounded-2xl p-6 flex items-center space-x-4 group cursor-pointer hover:scale-105 transition-all duration-300"
-              >
+              <a href="https://youtube.com/sagareditsofficial" target="_blank" rel="noopener noreferrer" className="stats-card rounded-2xl p-6 flex items-center space-x-4 group cursor-pointer hover:scale-105 transition-all duration-300">
                 <Youtube className="w-7 h-7 text-accent group-hover:scale-110 transition-transform" />
                 <div className="text-left">
                   <p className="text-sm text-muted-foreground">YouTube</p>
@@ -59,17 +48,11 @@ const HeroSection = () => {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
-              <Button 
-                onClick={scrollToPortfolio}
-                className="glow-effect bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-10 py-7 text-lg rounded-2xl shadow-lg"
-              >
+              <Button onClick={scrollToPortfolio} className="glow-effect bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-10 py-7 text-lg rounded-2xl shadow-lg">
                 View My Work
                 <ArrowDown className="ml-3 w-5 h-5" />
               </Button>
-              <Button 
-                variant="outline" 
-                className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-10 py-7 text-lg rounded-2xl transition-all duration-300 shadow-lg"
-              >
+              <Button variant="outline" className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-10 py-7 text-lg rounded-2xl transition-all duration-300 shadow-lg">
                 Get In Touch
               </Button>
             </div>
@@ -79,11 +62,7 @@ const HeroSection = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="profile-glow w-80 h-80 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] rounded-3xl overflow-hidden animate-float shadow-2xl">
-                <img 
-                  src={sagarHeroImage}
-                  alt="Sagar Singh - Digital Content Creator"
-                  className="w-full h-full object-cover object-center"
-                />
+                <img src={sagarHeroImage} alt="Sagar Singh - Digital Content Creator" className="w-full h-full object-center object-cover" />
               </div>
               {/* Modern floating elements */}
               <div className="absolute -top-6 -right-6 w-12 h-12 bg-accent rounded-full animate-pulse shadow-lg"></div>
@@ -94,8 +73,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
