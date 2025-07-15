@@ -17,7 +17,6 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
     email: "",
     company: "",
     campaignType: "",
-    timeline: "",
     description: ""
   });
   const [isLoading, setIsLoading] = useState(false);
@@ -33,7 +32,6 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
         from_email: formData.email,
         company: formData.company,
         campaign_type: formData.campaignType,
-        timeline: formData.timeline,
         message: formData.description,
         to_name: "Sagar Singh",
         subject: `New Campaign Request from ${formData.name}`,
@@ -56,7 +54,6 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
         email: "",
         company: "",
         campaignType: "",
-        timeline: "",
         description: ""
       });
       onClose();
@@ -179,22 +176,6 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
               </div>
             </div>
 
-            <div>
-              <label className="block text-sm font-medium mb-2">Timeline</label>
-              <select
-                name="timeline"
-                value={formData.timeline}
-                onChange={handleChange}
-                className="w-full p-3 border border-input bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-transparent"
-              >
-                <option value="">Select timeline</option>
-                <option value="asap">ASAP</option>
-                <option value="1-week">Within 1 week</option>
-                <option value="2-weeks">Within 2 weeks</option>
-                <option value="1-month">Within 1 month</option>
-                <option value="flexible">Flexible</option>
-              </select>
-            </div>
 
             <div>
               <label className="block text-sm font-medium mb-2">Campaign Description *</label>
