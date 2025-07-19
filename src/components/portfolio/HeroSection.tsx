@@ -2,7 +2,6 @@ import { Instagram, Youtube, ArrowDown, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import sagarHeroImage from "@/assets/sagar-hero-new.png";
 const HeroSection = () => {
   const navigate = useNavigate();
   const [isHeroImageVisible, setIsHeroImageVisible] = useState(false);
@@ -114,7 +113,7 @@ const HeroSection = () => {
               }`}
             >
               <div className="profile-glow w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] rounded-full overflow-hidden animate-float shadow-2xl">
-                <img src={sagarHeroImage} alt="Sagar Singh - Digital Content Creator" className="w-full h-full object-center object-cover" />
+                <img src="https://i.postimg.cc/VvRrZTtG/Screenshot-20230222-005158-Instagram.png" alt="Sagar Singh - Digital Content Creator" className="w-full h-full object-center object-cover" />
               </div>
               {/* Modern floating elements - Responsive */}
               <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 lg:-top-6 lg:-right-6 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-accent rounded-full animate-pulse shadow-lg"></div>

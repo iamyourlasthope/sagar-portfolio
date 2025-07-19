@@ -1,73 +1,148 @@
-# Welcome to your Lovable project
+# Sagar Singh - Portfolio Website
 
-## Project info
+A modern, responsive portfolio website for Sagar Singh, a digital content creator and meme marketer with 100K+ followers across Instagram and YouTube.
 
-**URL**: https://lovable.dev/projects/44fdcf08-be77-4088-aa16-e100d39d8b1b
+## 🚀 Features
 
-## How can I edit this code?
+- **Server-Side Rendering (SSR)** - Improved SEO and performance
+- **Responsive Design** - Works perfectly on all devices
+- **Modern UI/UX** - Built with React, TypeScript, and Tailwind CSS
+- **Interactive Components** - Smooth animations and transitions
+- **Contact Integration** - EmailJS integration for contact forms
+- **Social Media Integration** - Direct links to Instagram and YouTube
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **Frontend**: React 18, TypeScript, Tailwind CSS
+- **UI Components**: Radix UI, Shadcn/ui
+- **Styling**: Tailwind CSS with custom animations
+- **Server**: Express.js with SSR
+- **Build Tool**: Vite
+- **State Management**: React Query
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/44fdcf08-be77-4088-aa16-e100d39d8b1b) and start prompting.
+## 📱 Pages
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Home** - Hero section with social stats and call-to-action
+- **About** - Skills and expertise showcase
+- **Portfolio** - Work samples and collaborations
+- **Services** - Offered services and packages
+- **Campaigns** - Past brand collaborations
+- **Contact** - Contact form and information
 
-**Use your preferred IDE**
+## 🚀 Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (v16 or higher)
+- npm or yarn
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/sagar-portfolio.git
+   cd sagar-portfolio
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+4. **Open your browser**
+   Navigate to `http://localhost:8080`
+
+### Production Build
+
+1. **Build the project**
+   ```bash
+   npm run build
+   ```
+
+2. **Start production server**
+   ```bash
+   npm run start
+   ```
+
+## 📁 Project Structure
+
+```
+sagaredits/
+├── src/
+│   ├── components/
+│   │   ├── portfolio/     # Portfolio-specific components
+│   │   └── ui/           # Reusable UI components
+│   ├── pages/            # Page components
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions
+│   ├── assets/           # Static assets
+│   ├── entry-client.tsx  # Client-side entry point
+│   ├── entry-server.tsx  # Server-side entry point
+│   └── main.tsx          # Main entry point
+├── server/
+│   └── index.js          # Express server for SSR
+├── public/               # Public assets
+└── index.html            # HTML template
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Customization
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Colors and Themes
+The project uses CSS custom properties for theming. Main colors are defined in `src/index.css`:
 
-**Use GitHub Codespaces**
+- Primary: Blue gradient
+- Accent: Electric blue
+- Background: Dark theme
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Adding New Pages
+1. Create a new component in `src/pages/`
+2. Add the route in `src/App.tsx`
+3. Update navigation if needed
 
-## What technologies are used for this project?
+### Updating Content
+- **Hero Section**: Edit `src/components/portfolio/HeroSection.tsx`
+- **About Section**: Edit `src/components/portfolio/AboutSection.tsx`
+- **Portfolio**: Edit `src/components/portfolio/PortfolioSection.tsx`
+- **Contact**: Edit `src/components/portfolio/ContactSection.tsx`
 
-This project is built with:
+## 🌐 Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### GitHub Pages
+1. Build the project: `npm run build`
+2. Push to GitHub
+3. Enable GitHub Pages in repository settings
+4. Set source to `/docs` or deploy branch
 
-## How can I deploy this project?
+### Vercel
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect and deploy your React app
+3. Configure build settings if needed
 
-Simply open [Lovable](https://lovable.dev/projects/44fdcf08-be77-4088-aa16-e100d39d8b1b) and click on Share -> Publish.
+### Netlify
+1. Connect your GitHub repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
 
-## Can I connect a custom domain to my Lovable project?
+## 📞 Contact
 
-Yes, you can!
+- **Instagram**: [@sagar.edits](https://www.instagram.com/sagar.edits/)
+- **YouTube**: [Sagar Edits Official](https://youtube.com/sagareditsofficial)
+- **Email**: Contact through the website form
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📄 License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is private and proprietary. All rights reserved.
+
+## 🙏 Acknowledgments
+
+- Built with [React](https://reactjs.org/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- UI Components from [Shadcn/ui](https://ui.shadcn.com/)
+- Icons from [Lucide](https://lucide.dev/)

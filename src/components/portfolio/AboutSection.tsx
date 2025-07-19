@@ -1,6 +1,5 @@
 import { CheckCircle } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import aboutArtwork from "@/assets/about-artwork.png";
 
 const AboutSection = () => {
   const [isImageVisible, setIsImageVisible] = useState(false);
@@ -57,7 +56,7 @@ const AboutSection = () => {
           >
             <div className="relative">
               <img
-                src={aboutArtwork}
+                src="https://i.postimg.cc/kXrFD6qw/ADLT-Artworkonly-10-removebg-preview.png"
                 alt="About Me Artwork"
                 className="w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 object-contain animate-float"
               />
