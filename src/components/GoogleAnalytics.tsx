@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-// Replace with your actual Google Analytics Measurement ID
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Replace with your actual GA4 ID
+// Google Analytics Measurement ID
+const GA_MEASUREMENT_ID = 'G-L6FMH1PHZS';
 
 declare global {
   interface Window {
