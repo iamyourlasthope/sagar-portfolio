@@ -84,7 +84,7 @@ const HeroSection = () => {
             </div>
 
             {/* CTA - Mobile Optimized */}
-            <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5 justify-center lg:justify-start px-2 sm:px-0">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-5 justify-center lg:justify-start px-2 sm:px-0">
               <Button 
                 onClick={scrollToPortfolio} 
                 className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 sm:px-8 lg:px-10 py-4 sm:py-6 lg:py-7 text-base sm:text-lg rounded-xl sm:rounded-2xl shadow-lg transition-all duration-300 touch-manipulation min-h-[52px] w-full sm:w-auto"
