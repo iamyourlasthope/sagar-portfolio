@@ -5,18 +5,29 @@ import PortfolioSection from "@/components/portfolio/PortfolioSection";
 import ServicesSection from "@/components/portfolio/ServicesSection";
 import ContactSection from "@/components/portfolio/ContactSection";
 import Footer from "@/components/portfolio/Footer";
+import SEO from "@/components/SEO";
 
 const Index = () => {
   return (
-    <div className="min-h-screen scroll-smooth">
-      <Navigation />
-      <HeroSection />
-      <AboutSection />
-      <PortfolioSection />
-      <ServicesSection />
-      <ContactSection />
-      <Footer />
-    </div>
+    <>
+      <SEO 
+        title="Sagar Singh - Meme Marketer & Digital Creator | 100K+ Followers"
+        description="Professional meme marketer and digital content creator with 100K+ followers. Expert in viral content creation, video editing, and social media management. Collaborated with Samsung, Amazon, and more."
+        keywords="meme marketer, digital creator, viral content, video editing, social media management, content creator, Instagram, YouTube, Adobe Premiere Pro, After Effects, Photoshop"
+        url="https://sagarsingh.com/"
+        type="website"
+        tags={["meme marketing", "digital content", "social media", "video editing", "content creation"]}
+      />
+      <div className="min-h-screen scroll-smooth">
+        <Navigation />
+        <HeroSection />
+        <AboutSection />
+        <PortfolioSection />
+        <ServicesSection />
+        <ContactSection />
+        <Footer />
+      </div>
+    </>
   );
 };
 

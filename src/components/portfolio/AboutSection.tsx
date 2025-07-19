@@ -31,10 +31,10 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="section-about py-12 sm:py-16 lg:py-20 px-4 sm:px-6 relative z-10">
+    <section id="about" className="section-about py-12 sm:py-16 lg:py-20 px-4 sm:px-6 relative z-10" role="region" aria-labelledby="about-heading">
       <div className="container mx-auto">
-        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+        <header className="text-center mb-10 sm:mb-12 lg:mb-16">
+          <h2 id="about-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             About <span className="text-gradient">Me</span>
           </h2>
           <div className="max-w-4xl mx-auto px-2 sm:px-0">
@@ -42,7 +42,7 @@ const AboutSection = () => {
               Experienced digital content creator with over <span className="text-accent font-semibold">5 years of expertise</span> in video editing and social media management. Successfully grew Instagram and YouTube to <span className="text-accent font-semibold">100K+ each</span>, and collaborated on promo campaigns for <span className="text-accent font-semibold">Amazon Prime, Mini TV</span>, and more.
             </p>
           </div>
-        </div>
+        </header>
 
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           {/* Animated Image - Mobile First */}
@@ -57,8 +57,9 @@ const AboutSection = () => {
             <div className="relative">
               <img
                 src="https://i.postimg.cc/kXrFD6qw/ADLT-Artworkonly-10-removebg-preview.png"
-                alt="About Me Artwork"
+                alt="Sagar Singh - Digital Content Creator artwork representing creative skills and expertise"
                 className="w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 object-contain animate-float"
+                loading="lazy"
               />
               {/* Modern floating elements - Responsive */}
               <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 lg:-top-4 lg:-right-4 w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 bg-accent/70 rounded-full animate-pulse shadow-lg"></div>
@@ -70,14 +71,14 @@ const AboutSection = () => {
           {/* Skills - Mobile Optimized */}
           <div className="space-y-6 sm:space-y-8 order-2 lg:order-2 px-2 sm:px-0">
             <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center lg:text-left">Skills & Expertise</h3>
-            <div className="space-y-3 sm:space-y-4">
+            <ul className="space-y-3 sm:space-y-4" role="list">
               {skills.map((skill, index) => (
-                <div key={index} className="flex items-start space-x-3 touch-manipulation">
-                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0 mt-0.5" />
+                <li key={index} className="flex items-start space-x-3 touch-manipulation">
+                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0 mt-0.5" aria-hidden="true" />
                   <span className="text-sm sm:text-base lg:text-lg leading-relaxed">{skill}</span>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </div>
