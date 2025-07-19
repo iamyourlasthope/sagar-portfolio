@@ -51,7 +51,7 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://sagarsingh.com/sitemap.xml
+Sitemap: https://sagaredits.in/sitemap.xml
 
 # Host directive
-Host: https://sagarsingh.com
+Host: https://sagaredits.in
