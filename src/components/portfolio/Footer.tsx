@@ -1,4 +1,4 @@
-import { Instagram, Youtube, Linkedin, Heart } from "lucide-react";
+import { Instagram, Youtube, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -39,8 +39,6 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center space-x-2 text-muted-foreground">
-            <span>Made with</span>
-            <Heart className="w-4 h-4 text-red-500" />
             <span>© {currentYear} Sagar Singh</span>
           </div>
         </div>
