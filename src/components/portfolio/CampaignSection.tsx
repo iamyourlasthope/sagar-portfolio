@@ -127,7 +127,7 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
 
   return (
     <div 
-      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[99999] flex items-center justify-center p-2 sm:p-4 overflow-hidden"
+      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[99999] flex items-center justify-center p-2 sm:p-4 overflow-hidden mt-16 sm:mt-0"
       onClick={handleBackdropClick}
     >
       <div 
