@@ -32,7 +32,14 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <span className="text-lg sm:text-xl font-bold">Sagar Edits</span>
+            <button
+              onClick={() => scrollToSection("home")}
+              className="text-lg sm:text-xl font-bold text-left bg-transparent border-none p-0 m-0 cursor-pointer hover:text-accent focus:outline-none"
+              style={{ background: 'none' }}
+              aria-label="Go to Home"
+            >
+              Sagar Edits
+            </button>
           </div>
           
           {/* Desktop Navigation */}
