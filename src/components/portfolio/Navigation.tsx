@@ -60,41 +60,41 @@ const Navigation = () => {
                 <span className="sr-only">Open menu</span>
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-64 bg-background/95 backdrop-blur-lg">
-              <div className="flex flex-col space-y-6 mt-8">
+            <SheetContent side="right" className="w-72 bg-background/95 backdrop-blur-lg">
+              <div className="flex flex-col space-y-4 mt-12">
                 <button 
                   onClick={() => scrollToSection("home")} 
-                  className="text-left text-lg text-foreground hover:text-accent transition-colors py-3 touch-manipulation"
+                  className="text-left text-lg text-foreground hover:text-accent transition-colors py-4 px-4 touch-manipulation rounded-lg hover:bg-accent/10"
                 >
                   Home
                 </button>
                 <button 
                   onClick={() => scrollToSection("about")} 
-                  className="text-left text-lg text-foreground hover:text-accent transition-colors py-3 touch-manipulation"
+                  className="text-left text-lg text-foreground hover:text-accent transition-colors py-4 px-4 touch-manipulation rounded-lg hover:bg-accent/10"
                 >
                   About
                 </button>
                 <button 
                   onClick={() => scrollToSection("portfolio")} 
-                  className="text-left text-lg text-foreground hover:text-accent transition-colors py-3 touch-manipulation"
+                  className="text-left text-lg text-foreground hover:text-accent transition-colors py-4 px-4 touch-manipulation rounded-lg hover:bg-accent/10"
                 >
                   Portfolio
                 </button>
                 <button 
                   onClick={() => scrollToSection("services")} 
-                  className="text-left text-lg text-foreground hover:text-accent transition-colors py-3 touch-manipulation"
+                  className="text-left text-lg text-foreground hover:text-accent transition-colors py-4 px-4 touch-manipulation rounded-lg hover:bg-accent/10"
                 >
                   Services
                 </button>
                 <button 
                   onClick={() => scrollToSection("merch")} 
-                  className="text-left text-lg text-foreground hover:text-accent transition-colors py-3 touch-manipulation"
+                  className="text-left text-lg text-foreground hover:text-accent transition-colors py-4 px-4 touch-manipulation rounded-lg hover:bg-accent/10"
                 >
                   Merch
                 </button>
                 <button 
                   onClick={() => scrollToSection("contact")} 
-                  className="text-left text-lg text-foreground hover:text-accent transition-colors py-3 touch-manipulation"
+                  className="text-left text-lg text-foreground hover:text-accent transition-colors py-4 px-4 touch-manipulation rounded-lg hover:bg-accent/10"
                 >
                   Contact
                 </button>
