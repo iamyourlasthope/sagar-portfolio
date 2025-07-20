@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // Google Analytics Measurement ID
-const GA_MEASUREMENT_ID = 'G-L6FMH1PHZS';
+const GA_MEASUREMENT_ID = 'G-P8K4PKP6R0';
 
 declare global {
   interface Window {
