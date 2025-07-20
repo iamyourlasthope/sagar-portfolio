@@ -127,11 +127,11 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
 
   return (
     <div 
-      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[99999] flex items-center justify-center p-2 sm:p-4 overflow-hidden mt-16 sm:mt-0"
+      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[99999] flex items-center justify-center p-2 sm:p-4 overflow-hidden"
       onClick={handleBackdropClick}
     >
       <div 
-        className="bg-background border shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto relative rounded-none sm:rounded-2xl h-[100dvh] sm:h-auto"
+        className="bg-background border shadow-2xl w-full max-w-2xl max-h-[calc(90vh-64px)] overflow-y-auto relative rounded-none sm:rounded-2xl h-[100dvh] sm:h-auto mt-0 sm:mt-16"
         role="dialog"
         aria-modal="true"
         aria-labelledby="campaign-modal-title"
