@@ -29,8 +29,9 @@ const MerchSection = () => {
           </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-0">
-          <div className="modern-card rounded-xl sm:rounded-2xl p-8 sm:p-12 lg:p-16">
+        {/* Responsive container: full width on mobile, max-w-4xl on desktop */}
+        <div className="w-full max-w-4xl mx-auto px-0">
+          <div className="modern-card rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 w-full">
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
               {/* Content - Right Side (order-1 on mobile, order-2 on desktop) */}
               <div className="flex-1 flex flex-col items-center lg:items-start space-y-6 order-1 lg:order-2">
@@ -57,7 +58,7 @@ const MerchSection = () => {
                   <img
                     src="https://i.postimg.cc/vHFpn6MY/pankhaj-bhaiya.png"
                     alt="Exclusive Merch Preview"
-                    className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 object-contain animate-float rounded-2xl shadow-xl"
+                    className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 object-contain animate-float rounded-2xl shadow-xl"
                     loading="lazy"
                   />
                   {/* Floating dots */}
