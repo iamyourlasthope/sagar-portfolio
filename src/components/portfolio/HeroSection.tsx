@@ -31,8 +31,8 @@ const HeroSection = () => {
       const elementPosition = element.offsetTop - offset;
       window.scrollTo({
         top: elementPosition,
-        behavior: "smooth"
-      });
+      behavior: "smooth"
+    });
     }
   };
 
@@ -43,8 +43,8 @@ const HeroSection = () => {
       const elementPosition = element.offsetTop - offset;
       window.scrollTo({
         top: elementPosition,
-        behavior: "smooth"
-      });
+      behavior: "smooth"
+    });
     }
   };
   return (

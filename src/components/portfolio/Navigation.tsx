@@ -21,8 +21,8 @@ const Navigation = () => {
       const elementPosition = element.offsetTop - offset;
       window.scrollTo({
         top: elementPosition,
-        behavior: "smooth"
-      });
+      behavior: "smooth"
+    });
     }
     setIsOpen(false); // Close mobile menu after clicking
   };

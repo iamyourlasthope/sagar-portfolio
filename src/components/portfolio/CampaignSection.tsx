@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, Send, Loader2, TrendingUp, Users, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,6 +21,37 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function to restore scroll when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  // Handle escape key to close modal
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscape);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [isOpen, onClose]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -76,9 +107,23 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
 
   if (!isOpen) return null;
 
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-background border rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+    <div 
+      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center p-4 overflow-hidden"
+      onClick={handleBackdropClick}
+    >
+      <div 
+        className="bg-background border rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="campaign-modal-title"
+      >
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b">
           <div className="flex items-center space-x-3">
@@ -86,7 +131,7 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
               <Target className="w-5 h-5 text-accent" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold">Start Your Campaign</h2>
+              <h2 id="campaign-modal-title" className="text-2xl font-bold">Start Your Campaign</h2>
               <p className="text-muted-foreground">Let's create something viral together</p>
             </div>
           </div>
