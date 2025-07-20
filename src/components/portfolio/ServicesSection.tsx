@@ -52,7 +52,7 @@ const ServicesSection = () => {
                     <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-accent" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold">
-                    🔥 Meme Marketing/Video Editing
+                    MEME Marketing/Video Editing 🔥
                   </h3>
                 </div>
                 
