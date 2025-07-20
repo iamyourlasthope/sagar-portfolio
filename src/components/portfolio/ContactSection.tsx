@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, Instagram, Youtube, Linkedin, Send, Loader2 } from "lucide-react";
+import { Mail, Instagram, Youtube, Linkedin, Send, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -155,16 +155,6 @@ const ContactSection = () => {
                 <div className="min-w-0 flex-1">
                   <p className="font-semibold text-sm sm:text-base">Email</p>
                   <p className="text-muted-foreground text-xs sm:text-sm truncate">contactsagaredits@gmail.com</p>
-                </div>
-              </a>
-              <a 
-                href="tel:+917042045361" 
-                className="modern-card flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 rounded-lg sm:rounded-xl touch-manipulation hover:border-accent transition-colors group"
-              >
-                <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
-                <div className="min-w-0 flex-1">
-                  <p className="font-semibold text-sm sm:text-base">Phone</p>
-                  <p className="text-muted-foreground text-xs sm:text-sm">+91 7042045361</p>
                 </div>
               </a>
             </div>

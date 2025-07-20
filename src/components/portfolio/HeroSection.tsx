@@ -69,7 +69,7 @@ const HeroSection = () => {
                 href="https://www.instagram.com/sagar.edits/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg sm:rounded-2xl p-4 sm:p-6 flex items-center space-x-3 sm:space-x-4 group cursor-pointer hover:bg-white/15 transition-all duration-300 touch-manipulation min-h-[60px] sm:min-h-[60px]"
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg sm:rounded-2xl p-3 sm:p-4 flex items-center space-x-3 sm:space-x-4 group cursor-pointer hover:bg-white/15 transition-all duration-300 touch-manipulation min-h-[44px] sm:min-h-[44px]"
                 aria-label="Follow Sagar Singh on Instagram - 100K+ followers"
                 title="Follow Sagar Singh on Instagram"
               >
@@ -84,7 +84,7 @@ const HeroSection = () => {
                 href="https://youtube.com/sagareditsofficial" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg sm:rounded-2xl p-4 sm:p-6 flex items-center space-x-3 sm:space-x-4 group cursor-pointer hover:bg-white/15 transition-all duration-300 touch-manipulation min-h-[60px] sm:min-h-[60px]"
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg sm:rounded-2xl p-3 sm:p-4 flex items-center space-x-3 sm:space-x-4 group cursor-pointer hover:bg-white/15 transition-all duration-300 touch-manipulation min-h-[44px] sm:min-h-[44px]"
                 aria-label="Subscribe to Sagar Singh on YouTube - 100K+ subscribers"
                 title="Subscribe to Sagar Singh on YouTube"
               >

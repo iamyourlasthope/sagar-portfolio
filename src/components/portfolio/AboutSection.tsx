@@ -25,9 +25,9 @@ const AboutSection = () => {
   const skills = [
     "Video Editing (Adobe Premiere Pro, After Effects)",
     "Meme Marketing",
-    "Photoshop Design", 
+    "Brand Integration with Humor", 
     "Trend Research & Business Insights",
-    "Social Media Management"
+    "Social Media Marketing"
   ];
 
   return (
@@ -48,7 +48,7 @@ const AboutSection = () => {
           {/* Animated Image - Mobile First */}
           <div 
             ref={imageRef}
-            className={`flex justify-center order-1 lg:order-1 transition-all duration-[800ms] ease-out ${
+            className={`flex justify-center order-1 transition-all duration-[800ms] ease-out ${
               isImageVisible
                 ? 'translate-x-0 opacity-100 scale-100'
                 : '-translate-x-16 opacity-0 scale-95'
@@ -56,9 +56,9 @@ const AboutSection = () => {
           >
             <div className="relative">
               <img
-                src="https://i.postimg.cc/kXrFD6qw/ADLT-Artworkonly-10-removebg-preview.png"
+                src="https://i.postimg.cc/tC1RD6nL/3e751ad2-a6cb-40c7-b10b-3c8c132be6fc.jpg"
                 alt="Sagar Singh - Digital Content Creator artwork representing creative skills and expertise"
-                className="w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 object-contain animate-float"
+                className="w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 object-contain animate-float rounded-lg"
                 loading="lazy"
               />
               {/* Modern floating elements - Responsive */}

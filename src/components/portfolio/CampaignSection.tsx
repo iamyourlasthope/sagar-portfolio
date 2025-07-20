@@ -208,11 +208,10 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
                   required
                   className="w-full p-3 border border-input bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-transparent"
                 >
-                  <option value="">Select campaign type</option>
+                  <option value="" disabled>Select campaign type</option>
                   <option value="meme-marketing">Meme Marketing</option>
                   <option value="brand-collaboration">Brand Collaboration</option>
                   <option value="product-promotion">Product Promotion</option>
-                  <option value="social-media-management">Social Media Management</option>
                   <option value="video-editing">Video Editing</option>
                   <option value="other">Other</option>
                 </select>
