@@ -21,18 +21,18 @@ const PortfolioSection = () => {
       type: "Entertainment Marketing"
     },
     {
-      title: "Hip Hop Promo on Amazon Mini TV",
-      postId: "CwnNDY0yaPv",
-      description: "Follow-up promotional campaign for Hip Hop content on Amazon Mini TV.",
-      platform: "Instagram",
-      type: "Series Promotion"
-    },
-    {
       title: "XYXX Underwear Promo", 
       postId: "C8l4BZ-SqAu",
       description: "Humorous brand promotion for XYXX underwear leveraging meme culture.",
       platform: "Instagram",
       type: "Fashion Marketing"
+    },
+    {
+      title: "Hip Hop Promo on Amazon Mini TV",
+      postId: "CwnNDY0yaPv",
+      description: "Follow-up promotional campaign for Hip Hop content on Amazon Mini TV.",
+      platform: "Instagram",
+      type: "Series Promotion"
     },
     {
       title: "Leaked on Amazon Mini TV",

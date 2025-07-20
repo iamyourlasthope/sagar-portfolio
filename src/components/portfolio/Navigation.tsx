@@ -23,7 +23,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-background/90 backdrop-blur-lg border-b border-border/50 shadow-lg" : "bg-transparent"}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-gray-900/98 backdrop-blur-lg border-b-2 border-blue-500/40 shadow-xl" : "bg-gray-900/80 backdrop-blur-md border-b border-blue-400/20"}`}>
       <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -43,6 +43,9 @@ const Navigation = () => {
             </button>
             <button onClick={() => scrollToSection("services")} className="text-muted-foreground hover:text-accent transition-colors touch-manipulation">
               Services
+            </button>
+            <button onClick={() => scrollToSection("merch")} className="text-muted-foreground hover:text-accent transition-colors touch-manipulation">
+              Merch
             </button>
             <button onClick={() => scrollToSection("contact")} className="text-muted-foreground hover:text-accent transition-colors touch-manipulation">
               Contact
@@ -82,6 +85,12 @@ const Navigation = () => {
                   className="text-left text-lg text-foreground hover:text-accent transition-colors py-3 touch-manipulation"
                 >
                   Services
+                </button>
+                <button 
+                  onClick={() => scrollToSection("merch")} 
+                  className="text-left text-lg text-foreground hover:text-accent transition-colors py-3 touch-manipulation"
+                >
+                  Merch
                 </button>
                 <button 
                   onClick={() => scrollToSection("contact")} 

@@ -49,7 +49,7 @@ const HeroSection = () => {
                 <span className="text-white">Sagar Singh</span>
               </h1>
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-blue-100 px-2 sm:px-0">
-                Creative Mind behind many Viral Contents.
+                Creative Mind behind many <span className="text-blue-400 font-bold">Viral Contents.</span>
               </h2>
             </header>
 
