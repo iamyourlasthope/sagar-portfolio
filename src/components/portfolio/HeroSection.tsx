@@ -26,16 +26,26 @@ const HeroSection = () => {
 
   const scrollToPortfolio = () => {
     const element = document.getElementById("portfolio");
-    element?.scrollIntoView({
-      behavior: "smooth"
-    });
+    if (element) {
+      const offset = window.innerWidth < 640 ? 80 : 0; // Mobile offset
+      const elementPosition = element.offsetTop - offset;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      });
+    }
   };
 
   const handleGetInTouch = () => {
     const element = document.getElementById("contact");
-    element?.scrollIntoView({
-      behavior: "smooth"
-    });
+    if (element) {
+      const offset = window.innerWidth < 640 ? 80 : 0; // Mobile offset
+      const elementPosition = element.offsetTop - offset;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      });
+    }
   };
   return (
     <section id="home" className="section-hero min-h-screen flex items-center justify-center pt-24 sm:pt-24 px-4 sm:px-6 lg:px-8 relative" role="banner" aria-label="Hero Section">
