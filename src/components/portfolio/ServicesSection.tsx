@@ -52,12 +52,12 @@ const ServicesSection = () => {
                     <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-accent" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold">
-                    🔥 Meme Marketing
+                    🔥 Meme Marketing/Video Editing
                   </h3>
                 </div>
                 
                 <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
-                  Creating trend-based, relatable meme content to promote your brand or project across digital platforms. Let's make your next campaign go viral.
+                  Creating trend-based, relatable meme content and providing professional video editing to promote your brand or project across digital platforms. Let's make your next campaign go viral.
                 </p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
@@ -71,7 +71,7 @@ const ServicesSection = () => {
                   </div>
                   <div className="flex items-center space-x-2">
                     <Palette className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0" />
-                    <span className="text-sm sm:text-base">Custom Meme Design</span>
+                    <span className="text-sm sm:text-base">Video Editing Service</span>
                   </div>
                 </div>
                 
@@ -119,9 +119,9 @@ const ServicesSection = () => {
             </div>
             <div className="modern-card rounded-lg sm:rounded-xl p-4 sm:p-6">
               <TrendingUp className="w-10 h-10 sm:w-12 sm:h-12 text-accent mb-3 sm:mb-4 mx-auto sm:mx-0" />
-              <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-center sm:text-left">Social Media Management</h4>
+              <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-center sm:text-left">Viral Content Strategy</h4>
               <p className="text-muted-foreground text-sm sm:text-base text-center sm:text-left">
-                Complete social media strategy and management to grow your online presence and engage your audience.
+                End-to-end strategy for creating viral, trend-based content that maximizes reach and engagement for your brand.
               </p>
             </div>
           </div>

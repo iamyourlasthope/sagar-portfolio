@@ -108,6 +108,15 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
     }));
   };
 
+  // Clear platform if campaignType is set to video-editing
+  const handleCampaignTypeSelect = (key: string) => {
+    setFormData(prev => ({
+      ...prev,
+      campaignType: key,
+      platform: key === 'video-editing' ? '' : prev.platform
+    }));
+  };
+
   if (!isOpen) return null;
 
   const handleBackdropClick = (e: React.MouseEvent) => {
@@ -118,11 +127,11 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
 
   return (
     <div 
-      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center p-4 overflow-hidden"
+      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[99999] flex items-center justify-center p-2 sm:p-4 overflow-hidden"
       onClick={handleBackdropClick}
     >
       <div 
-        className="bg-background border rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative"
+        className="bg-background border shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto relative rounded-none sm:rounded-2xl h-[100dvh] sm:h-auto"
         role="dialog"
         aria-modal="true"
         aria-labelledby="campaign-modal-title"
@@ -146,22 +155,47 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
         {/* Content */}
         <div className="p-6">
           {/* Campaign Types */}
-          <div className="grid md:grid-cols-3 gap-4 mb-8">
-            <div className="text-center p-4 rounded-lg border bg-card">
-              <TrendingUp className="w-8 h-8 text-accent mx-auto mb-2" />
-              <h3 className="font-semibold">Meme Marketing</h3>
-              <p className="text-sm text-muted-foreground">Viral content creation</p>
-            </div>
-            <div className="text-center p-4 rounded-lg border bg-card">
-              <Users className="w-8 h-8 text-accent mx-auto mb-2" />
-              <h3 className="font-semibold">Brand Collaboration</h3>
-              <p className="text-sm text-muted-foreground">Sponsored content</p>
-            </div>
-            <div className="text-center p-4 rounded-lg border bg-card">
-              <Target className="w-8 h-8 text-accent mx-auto mb-2" />
-              <h3 className="font-semibold">Product Promotion</h3>
-              <p className="text-sm text-muted-foreground">Targeted campaigns</p>
-            </div>
+          <div className="grid grid-cols-2 gap-3 mb-8 justify-center sm:flex sm:flex-row sm:gap-3">
+            {[
+              {
+                key: "video-editing",
+                icon: <TrendingUp className="w-7 h-7 text-accent mx-auto mb-1" />,
+                title: "Video Editing",
+                desc: (
+                  <span className="block text-sm text-muted-foreground leading-tight">Professional<br/>video services</span>
+                )
+              },
+              {
+                key: "brand-collaboration",
+                icon: <Users className="w-7 h-7 text-accent mx-auto mb-1" />,
+                title: "Brand Collaboration",
+                desc: <span className="block text-sm text-muted-foreground leading-tight">Sponsored content</span>
+              },
+              {
+                key: "product-promotion",
+                icon: <Target className="w-7 h-7 text-accent mx-auto mb-1" />,
+                title: "Product Promotion",
+                desc: <span className="block text-sm text-muted-foreground leading-tight">Targeted campaigns</span>
+              },
+              {
+                key: "other",
+                icon: <TrendingUp className="w-7 h-7 text-accent mx-auto mb-1" />,
+                title: "Other",
+                desc: <span className="block text-sm text-muted-foreground leading-tight">Custom campaign type</span>
+              }
+            ].map(box => (
+              <button
+                key={box.key}
+                type="button"
+                onClick={() => handleCampaignTypeSelect(box.key)}
+                className={`w-36 h-36 flex flex-col items-center justify-center text-center p-2 rounded-lg border bg-card transition-colors focus:outline-none ${formData.campaignType === box.key ? 'border-accent ring-2 ring-accent' : 'hover:border-accent/60'}`}
+                aria-pressed={formData.campaignType === box.key}
+              >
+                {box.icon}
+                <h3 className="font-semibold text-base mb-1 mt-1">{box.title}</h3>
+                {box.desc}
+              </button>
+            ))}
           </div>
 
           {/* Form */}
@@ -203,8 +237,9 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
                   name="platform"
                   value={formData.platform || ''}
                   onChange={handleChange}
-                  required
-                  className="w-full p-4 min-h-[56px] border border-input bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-transparent text-base"
+                  required={formData.campaignType !== 'video-editing'}
+                  disabled={formData.campaignType === 'video-editing'}
+                  className={`w-full p-4 min-h-[56px] border border-input bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-transparent text-base ${formData.campaignType === 'video-editing' ? 'opacity-60 cursor-not-allowed' : ''}`}
                 >
                   <option value="" disabled>Select platform</option>
                   <option value="instagram">Instagram</option>
@@ -270,7 +305,7 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
               ) : (
                 <>
                   <Send className="w-5 h-5 mr-2" />
-                  Submit Campaign Request
+                  Submit Your Request
                 </>
               )}
             </Button>
