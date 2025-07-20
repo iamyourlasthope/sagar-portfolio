@@ -98,9 +98,9 @@ Your website has been fully optimized for Google's crawler and search engine vis
 ## 🎯 Target Keywords
 
 Your website is optimized for these primary keywords:
-- **Primary**: "Sagar Singh", "Meme Marketer", "Digital Creator"
+- **Primary**: "Sagar Singh", "Sagar Edits", "Meme Marketer", "Digital Creator"
 - **Secondary**: "Viral Content Creator", "Social Media Management", "Video Editing"
-- **Long-tail**: "Professional meme marketer with 100K+ followers", "Digital content creator India"
+- **Long-tail**: "Professional meme marketer with 100K+ followers", "Digital content creator India", "Sagar Edits portfolio"
 
 ## 📈 SEO Best Practices Implemented
 
