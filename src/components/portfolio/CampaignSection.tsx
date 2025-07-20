@@ -17,7 +17,8 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
     email: "",
     company: "",
     campaignType: "",
-    description: ""
+    description: "",
+    platform: ""
   });
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
@@ -64,6 +65,7 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
         company_name: formData.company,
         campaign_type: formData.campaignType,
         campaign_description: formData.description,
+        platform: formData.platform
       };
 
       await emailjs.send(
@@ -83,7 +85,8 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
         email: "",
         company: "",
         campaignType: "",
-        description: ""
+        description: "",
+        platform: ""
       });
       onClose();
     } catch (error) {
@@ -173,6 +176,7 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
                   onChange={handleChange}
                   required
                   placeholder="Your full name"
+                  className="w-full p-4 min-h-[56px] border border-input bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-transparent text-base"
                 />
               </div>
               <div>
@@ -183,12 +187,31 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  title="Please enter a valid email address."
                   placeholder="your@email.com"
+                  className="w-full p-4 min-h-[56px] border border-input bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-transparent text-base"
                 />
               </div>
             </div>
 
+            {/* Platform and Company/Brand Row */}
             <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium mb-2">Platform *</label>
+                <select
+                  name="platform"
+                  value={formData.platform || ''}
+                  onChange={handleChange}
+                  required
+                  className="w-full p-4 min-h-[56px] border border-input bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-transparent text-base"
+                >
+                  <option value="" disabled>Select platform</option>
+                  <option value="instagram">Instagram</option>
+                  <option value="youtube">YouTube</option>
+                  <option value="instagram-youtube">Instagram and YouTube combined</option>
+                </select>
+              </div>
               <div>
                 <label className="block text-sm font-medium mb-2">Company/Brand</label>
                 <Input
@@ -197,28 +220,30 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
                   value={formData.company}
                   onChange={handleChange}
                   placeholder="Your company name"
+                  className="w-full p-4 min-h-[56px] border border-input bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-transparent text-base"
                 />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">Campaign Type *</label>
-                <select
-                  name="campaignType"
-                  value={formData.campaignType}
-                  onChange={handleChange}
-                  required
-                  className="w-full p-3 border border-input bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-transparent"
-                >
-                  <option value="" disabled>Select campaign type</option>
-                  <option value="meme-marketing">Meme Marketing</option>
-                  <option value="brand-collaboration">Brand Collaboration</option>
-                  <option value="product-promotion">Product Promotion</option>
-                  <option value="video-editing">Video Editing</option>
-                  <option value="other">Other</option>
-                </select>
               </div>
             </div>
 
+            {/* Campaign Type - Full width, large box */}
+            <div>
+              <label className="block text-sm font-medium mb-2">Campaign Type *</label>
+              <select
+                name="campaignType"
+                value={formData.campaignType}
+                onChange={handleChange}
+                required
+                className="w-full p-4 min-h-[56px] border border-input bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-transparent text-base"
+              >
+                <option value="" disabled>Select campaign type</option>
+                <option value="brand-collaboration">Brand Collaboration</option>
+                <option value="product-promotion">Product Promotion</option>
+                <option value="video-editing">Video Editing</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
 
+            {/* Campaign Description - Full width, large box */}
             <div>
               <label className="block text-sm font-medium mb-2">Campaign Description *</label>
               <Textarea
@@ -227,7 +252,8 @@ const CampaignSection = ({ isOpen, onClose }: CampaignSectionProps) => {
                 onChange={handleChange}
                 required
                 placeholder="Tell me about your campaign goals, target audience, and any specific requirements..."
-                rows={4}
+                rows={5}
+                className="w-full p-4 min-h-[120px] border border-input bg-background rounded-md focus:ring-2 focus:ring-ring focus:border-transparent text-base"
               />
             </div>
 
