@@ -17,7 +17,7 @@ const Navigation = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = window.innerWidth < 640 ? 80 : 0; // Mobile offset
+      const offset = window.innerWidth < 640 ? 60 : 0; // Mobile offset
       const elementPosition = element.offsetTop - offset;
       window.scrollTo({
         top: elementPosition,

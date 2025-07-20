@@ -27,7 +27,7 @@ const HeroSection = () => {
   const scrollToPortfolio = () => {
     const element = document.getElementById("portfolio");
     if (element) {
-      const offset = window.innerWidth < 640 ? 80 : 0; // Mobile offset
+      const offset = window.innerWidth < 640 ? 60 : 0; // Mobile offset
       const elementPosition = element.offsetTop - offset;
       window.scrollTo({
         top: elementPosition,
@@ -39,7 +39,7 @@ const HeroSection = () => {
   const handleGetInTouch = () => {
     const element = document.getElementById("contact");
     if (element) {
-      const offset = window.innerWidth < 640 ? 80 : 0; // Mobile offset
+      const offset = window.innerWidth < 640 ? 60 : 0; // Mobile offset
       const elementPosition = element.offsetTop - offset;
       window.scrollTo({
         top: elementPosition,
