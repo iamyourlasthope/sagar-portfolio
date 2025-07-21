@@ -4,7 +4,7 @@ import { StaticRouter } from 'react-router-dom/server';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import App from './App';
 
-export function render(url: string, context: any) {
+export function render(url: string) {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -16,7 +16,7 @@ export function render(url: string, context: any) {
 
   const html = ReactDOMServer.renderToString(
     <QueryClientProvider client={queryClient}>
-      <StaticRouter location={url} context={context}>
+      <StaticRouter location={url}>
         <App />
       </StaticRouter>
     </QueryClientProvider>

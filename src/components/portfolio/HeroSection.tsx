@@ -11,7 +11,7 @@ const HeroSection = () => {
   const [isHeroImageVisible, setIsHeroImageVisible] = useState(false);
   const heroImageRef = useRef<HTMLDivElement>(null);
   const vantaRef = useRef<HTMLDivElement>(null);
-  const vantaEffect = useRef<any>(null);
+  const vantaEffect = useRef<{ destroy: () => void } | null>(null);
 
   useEffect(() => {
     if (!vantaEffect.current && vantaRef.current) {
@@ -95,7 +95,7 @@ const HeroSection = () => {
             <header className="space-y-4 sm:space-y-6">
               <p className="text-blue-200 text-base sm:text-lg font-medium tracking-wide" role="doc-subtitle">Hi, I'm</p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold leading-[0.9] tracking-tight">
-                <span className="text-white">Sagar Singh</span>
+                Sagar Singh
               </h1>
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-blue-100 px-2 sm:px-0">
                 Creative Mind behind many <span className="text-blue-400 font-bold">Viral Contents.</span>
