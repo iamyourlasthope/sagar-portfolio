@@ -22,7 +22,7 @@ const MerchSection = () => {
   }, [isImageVisible]);
 
   return (
-    <section id="merch" className="section-merch py-16 sm:py-20 lg:py-24 px-4 sm:px-6 relative z-0">
+    <section id="merch" className="section-merch py-16 sm:py-20 lg:py-24 px-2 sm:px-6 relative z-0">
       <div className="container mx-auto">
         <div className="text-center mb-10 sm:mb-16">
           <h2 className="text-4xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 px-2 sm:px-0">

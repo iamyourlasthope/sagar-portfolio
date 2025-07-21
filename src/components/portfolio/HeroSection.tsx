@@ -84,7 +84,7 @@ const HeroSection = () => {
     <section
       id="home"
       ref={vantaRef}
-      className="section-hero min-h-screen flex items-center justify-center pt-24 sm:pt-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+      className="section-hero min-h-screen flex items-center justify-center pt-24 sm:pt-24 px-2 sm:px-6 lg:px-8 relative overflow-hidden"
       role="banner"
       aria-label="Hero Section"
     >

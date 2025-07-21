@@ -27,7 +27,7 @@ const ServicesSection = () => {
   }, [isImageVisible]);
 
   return (
-    <section id="services" className="section-services py-12 sm:py-16 lg:py-20 px-4 sm:px-6 relative z-10">
+    <section id="services" className="section-services py-12 sm:py-16 lg:py-20 px-2 sm:px-6 relative z-10">
       <div className="container mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-2 sm:px-0">
