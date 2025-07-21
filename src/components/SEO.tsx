@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import seoImage from "@/assets/SEO-Metatag.webp";
 
 interface SEOProps {
   title?: string;
@@ -18,7 +19,7 @@ const SEO: React.FC<SEOProps> = ({
   title = "Sagar Singh - Meme Marketer & Digital Creator | 100K+ Followers",
   description = "Professional meme marketer and digital content creator with 100K+ followers. Expert in viral content creation, video editing, and social media management.",
   keywords = "Sagar Edits, Sagar Singh, meme marketer, digital creator, viral content, video editing, social media management, content creator, Instagram, YouTube",
-  image = "https://i.postimg.cc/28KSqFdZ/logo.jpg",
+  image = seoImage,
   url = "https://sagaredits.in/",
   type = "website",
   author = "Sagar Singh",

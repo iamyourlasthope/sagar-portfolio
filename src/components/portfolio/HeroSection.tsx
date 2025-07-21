@@ -2,10 +2,43 @@ import { Instagram, Youtube, ArrowDown, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import * as THREE from "three";
+import FOG from "vanta/dist/vanta.fog.min";
+import heroImage from "@/assets/Hero Page.webp";
+
 const HeroSection = () => {
   const navigate = useNavigate();
   const [isHeroImageVisible, setIsHeroImageVisible] = useState(false);
   const heroImageRef = useRef<HTMLDivElement>(null);
+  const vantaRef = useRef<HTMLDivElement>(null);
+  const vantaEffect = useRef<any>(null);
+
+  useEffect(() => {
+    if (!vantaEffect.current && vantaRef.current) {
+      vantaEffect.current = FOG({
+        el: vantaRef.current,
+        THREE: THREE,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        zoom: 0.6,
+        highlightColor: 0x3b82f6, // blue-500
+        midtoneColor: 0x1e293b,   // slate-800
+        lowlightColor: 0x0ea5e9,  // sky-500
+        baseColor: 0x0f172a,      // slate-900
+        blurFactor: 0.7,
+        speed: 1.2,
+      });
+    }
+    return () => {
+      if (vantaEffect.current) {
+        vantaEffect.current.destroy();
+        vantaEffect.current = null;
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,8 +81,14 @@ const HeroSection = () => {
     }
   };
   return (
-    <section id="home" className="section-hero min-h-screen flex items-center justify-center pt-24 sm:pt-24 px-4 sm:px-6 lg:px-8 relative" role="banner" aria-label="Hero Section">
-      <div className="container mx-auto max-w-7xl">
+    <section
+      id="home"
+      ref={vantaRef}
+      className="section-hero min-h-screen flex items-center justify-center pt-24 sm:pt-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+      role="banner"
+      aria-label="Hero Section"
+    >
+      <div className="container mx-auto max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-5 sm:space-y-8 lg:space-y-10 text-center lg:text-left order-2 lg:order-1">
@@ -130,7 +169,7 @@ const HeroSection = () => {
             >
               <div className="profile-glow w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] rounded-full overflow-hidden animate-float shadow-2xl">
                 <img 
-                  src="https://i.postimg.cc/VvRrZTtG/Screenshot-20230222-005158-Instagram.png" 
+                  src={heroImage}
                   alt="Sagar Singh - Professional Digital Content Creator and Meme Marketer with 100K+ followers" 
                   className="w-full h-full object-center object-cover"
                   loading="eager"

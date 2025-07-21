@@ -1,5 +1,6 @@
 import { ShoppingBag } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import merchImage from "@/assets/merch.webp";
 
 const MerchSection = () => {
   const [isImageVisible, setIsImageVisible] = useState(false);
@@ -56,7 +57,7 @@ const MerchSection = () => {
               >
                 <div className="relative">
                   <img
-                    src="https://i.postimg.cc/vHFpn6MY/pankhaj-bhaiya.png"
+                    src={merchImage}
                     alt="Exclusive Merch Preview"
                     className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 object-contain animate-float rounded-2xl shadow-xl"
                     loading="lazy"

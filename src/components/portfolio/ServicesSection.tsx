@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Zap, TrendingUp, Video, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CampaignSection from "./CampaignSection";
+import servicesImage from "@/assets/Services.webp";
 
 const ServicesSection = () => {
   const [isCampaignOpen, setIsCampaignOpen] = useState(false);
@@ -94,7 +95,7 @@ const ServicesSection = () => {
               >
                 <div className="relative">
                   <img
-                    src="https://i.postimg.cc/kXrFD6qw/ADLT-Artworkonly-10-removebg-preview.png"
+                    src={servicesImage}
                     alt="Meme Marketing creative artwork representing viral content creation"
                     className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain animate-float"
                     loading="lazy"
