@@ -23,7 +23,7 @@ const SEO: React.FC<SEOProps> = ({
   title = DEFAULT_TITLE,
   description = DEFAULT_DESCRIPTION,
   keywords = DEFAULT_KEYWORDS,
-  image = seoImage,
+  image = "https://sagaredits.in/favicon.png",
   url = "https://sagaredits.in/",
   type = "website",
   author = "Sagar Singh",
@@ -32,8 +32,8 @@ const SEO: React.FC<SEOProps> = ({
   section,
   tags = []
 }) => {
-  const siteName = "Sagar Singh Portfolio";
-  const twitterHandle = "@sagaredits";
+  const siteName = "Sagar Edits – Meme Marketer & Digital Creator";
+  const twitterHandle = "@sagar_edits";
 
   return (
     <Helmet>

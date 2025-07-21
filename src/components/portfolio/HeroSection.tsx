@@ -89,7 +89,7 @@ const HeroSection = () => {
       aria-label="Hero Section"
     >
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-2 sm:gap-8 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-5 sm:space-y-8 lg:space-y-10 text-center lg:text-left order-2 lg:order-1 lg:-mt-12">
             <header className="space-y-4 sm:space-y-6">
@@ -167,7 +167,7 @@ const HeroSection = () => {
           <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-4 sm:mb-0">
             <div 
               ref={heroImageRef}
-              className={`relative transition-all duration-[800ms] ease-out my-4 sm:my-0 ${
+              className={`relative transition-all duration-[800ms] ease-out my-2 sm:my-0 ${
                 isHeroImageVisible
                   ? 'translate-x-0 opacity-100 scale-100'
                   : '-translate-x-16 opacity-0 scale-95'
