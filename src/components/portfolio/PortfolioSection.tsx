@@ -28,13 +28,6 @@ const PortfolioSection = () => {
       type: "Fashion Marketing"
     },
     {
-      title: "Hip Hop Promo on Amazon Mini TV",
-      postId: "CwnNDY0yaPv",
-      description: "Follow-up promotional campaign for Hip Hop content on Amazon Mini TV.",
-      platform: "Instagram",
-      type: "Series Promotion"
-    },
-    {
       title: "Leaked on Amazon Mini TV",
       postId: "Cww-tOHyYQl", 
       description: "Promotional content for 'Leaked' series on Amazon Mini TV platform.",
@@ -47,6 +40,13 @@ const PortfolioSection = () => {
       description: "Promotional content for the Bollywood movie featuring Salman Khan.",
       platform: "Instagram",
       type: "Entertainment"
+    },
+    {
+      title: "Hip Hop Promo on Amazon Mini TV",
+      postId: "CwnNDY0yaPv",
+      description: "Follow-up promotional campaign for Hip Hop content on Amazon Mini TV.",
+      platform: "Instagram",
+      type: "Series Promotion"
     }
   ];
 

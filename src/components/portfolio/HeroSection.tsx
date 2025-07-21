@@ -103,37 +103,43 @@ const HeroSection = () => {
             </header>
 
             {/* Social Stats - Mobile Optimized */}
-            <nav className="flex flex-col gap-3 sm:gap-4 justify-center lg:justify-start px-2 sm:px-0" role="navigation" aria-label="Social Media Profiles">
-              <a 
-                href="https://www.instagram.com/sagar.edits/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg sm:rounded-2xl p-3 sm:p-4 flex items-center space-x-3 sm:space-x-4 group cursor-pointer hover:bg-white/15 transition-all duration-300 touch-manipulation min-h-[44px] sm:min-h-[44px]"
-                aria-label="Follow Sagar Singh on Instagram - 100K+ followers"
-                title="Follow Sagar Singh on Instagram"
-              >
-                <Instagram className="w-6 h-6 sm:w-7 sm:h-7 text-blue-400 group-hover:scale-110 transition-transform flex-shrink-0" aria-hidden="true" />
-                <div className="text-left flex-1">
-                  <p className="text-sm sm:text-sm text-blue-300">Instagram</p>
-                  <p className="font-bold text-lg sm:text-xl text-white">100K+</p>
-                </div>
-                <ExternalLink className="w-4 h-4 sm:w-4 sm:h-4 text-blue-300 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" aria-hidden="true" />
-              </a>
-              <a 
-                href="https://youtube.com/sagareditsofficial" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg sm:rounded-2xl p-3 sm:p-4 flex items-center space-x-3 sm:space-x-4 group cursor-pointer hover:bg-white/15 transition-all duration-300 touch-manipulation min-h-[44px] sm:min-h-[44px]"
-                aria-label="Subscribe to Sagar Singh on YouTube - 100K+ subscribers"
-                title="Subscribe to Sagar Singh on YouTube"
-              >
-                <Youtube className="w-6 h-6 sm:w-7 sm:h-7 text-blue-400 group-hover:scale-110 transition-transform flex-shrink-0" aria-hidden="true" />
-                <div className="text-left flex-1">
-                  <p className="text-sm sm:text-sm text-blue-300">YouTube</p>
-                  <p className="font-bold text-lg sm:text-xl text-white">100K+</p>
-                </div>
-                <ExternalLink className="w-4 h-4 sm:w-4 sm:h-4 text-blue-300 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" aria-hidden="true" />
-              </a>
+            <nav
+              className="flex flex-col sm:gap-4 justify-center lg:justify-start px-2 sm:px-0 sm:flex-col gap-3"
+              role="navigation"
+              aria-label="Social Media Profiles"
+            >
+              <div className="flex flex-row gap-2 sm:flex-col sm:gap-4 w-full">
+                <a
+                  href="https://www.instagram.com/sagar.edits/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg sm:rounded-2xl p-2 sm:p-4 flex items-center space-x-2 sm:space-x-4 group cursor-pointer hover:bg-white/15 transition-all duration-300 touch-manipulation min-h-[38px] sm:min-h-[44px] max-w-[160px] sm:max-w-none mx-auto sm:mx-0"
+                  aria-label="Follow Sagar Singh on Instagram - 100K+ followers"
+                  title="Follow Sagar Singh on Instagram"
+                >
+                  <Instagram className="w-5 h-5 sm:w-7 sm:h-7 text-blue-400 group-hover:scale-110 transition-transform flex-shrink-0" aria-hidden="true" />
+                  <div className="text-left flex-1">
+                    <p className="text-xs sm:text-sm text-blue-300">Instagram</p>
+                    <p className="font-bold text-base sm:text-xl text-white">100K+</p>
+                  </div>
+                  <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 text-blue-300 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" aria-hidden="true" />
+                </a>
+                <a
+                  href="https://youtube.com/sagareditsofficial"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg sm:rounded-2xl p-2 sm:p-4 flex items-center space-x-2 sm:space-x-4 group cursor-pointer hover:bg-white/15 transition-all duration-300 touch-manipulation min-h-[38px] sm:min-h-[44px] max-w-[160px] sm:max-w-none mx-auto sm:mx-0"
+                  aria-label="Subscribe to Sagar Singh on YouTube - 100K+ subscribers"
+                  title="Subscribe to Sagar Singh on YouTube"
+                >
+                  <Youtube className="w-5 h-5 sm:w-7 sm:h-7 text-blue-400 group-hover:scale-110 transition-transform flex-shrink-0" aria-hidden="true" />
+                  <div className="text-left flex-1">
+                    <p className="text-xs sm:text-sm text-blue-300">YouTube</p>
+                    <p className="font-bold text-base sm:text-xl text-white">100K+</p>
+                  </div>
+                  <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 text-blue-300 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" aria-hidden="true" />
+                </a>
+              </div>
             </nav>
 
             {/* CTA - Mobile Optimized */}
