@@ -55,7 +55,7 @@ const PortfolioSection = () => {
     : projects.slice(0, 3);
 
   return (
-    <section id="portfolio" className="section-portfolio py-12 sm:py-16 lg:py-24 px-2 sm:px-6 lg:px-8 relative z-10">
+    <section id="portfolio" className="section-portfolio py-12 sm:py-16 lg:py-24 px-1 sm:px-6 lg:px-8 relative z-10">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 tracking-tight text-foreground px-2 sm:px-0">

@@ -32,7 +32,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="section-about py-12 sm:py-16 lg:py-20 px-2 sm:px-6 relative z-10" role="region" aria-labelledby="about-heading">
+    <section id="about" className="section-about py-12 sm:py-16 lg:py-20 px-1 sm:px-6 relative z-10" role="region" aria-labelledby="about-heading">
       <div className="container mx-auto">
         <header className="text-center mb-10 sm:mb-12 lg:mb-16">
           <h2 id="about-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">

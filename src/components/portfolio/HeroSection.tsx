@@ -84,14 +84,14 @@ const HeroSection = () => {
     <section
       id="home"
       ref={vantaRef}
-      className="section-hero min-h-screen flex items-center justify-center pt-24 sm:pt-24 px-2 sm:px-6 lg:px-8 relative overflow-hidden"
+      className="section-hero min-h-screen flex items-center justify-center pt-24 sm:pt-24 px-1 sm:px-6 lg:px-8 relative overflow-hidden"
       role="banner"
       aria-label="Hero Section"
     >
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="space-y-5 sm:space-y-8 lg:space-y-10 text-center lg:text-left order-2 lg:order-1">
+          <div className="space-y-5 sm:space-y-8 lg:space-y-10 text-center lg:text-left order-2 lg:order-1 lg:-mt-12">
             <header className="space-y-4 sm:space-y-6">
               <p className="text-blue-200 text-base sm:text-lg font-medium tracking-wide" role="doc-subtitle">Hi, I'm</p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold leading-[0.9] tracking-tight">
@@ -143,7 +143,7 @@ const HeroSection = () => {
             </nav>
 
             {/* CTA - Mobile Optimized */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-5 justify-center lg:justify-start px-2 sm:px-0" role="group" aria-label="Call to Action Buttons">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 lg:gap-5 justify-center lg:justify-start px-2 sm:px-0" role="group" aria-label="Call to Action Buttons">
               <Button 
                 onClick={scrollToPortfolio} 
                 className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 sm:px-8 lg:px-10 py-4 sm:py-6 lg:py-7 text-base sm:text-lg rounded-lg sm:rounded-2xl shadow-lg transition-all duration-300 touch-manipulation min-h-[52px] sm:min-h-[52px] w-full sm:w-auto"
@@ -167,7 +167,7 @@ const HeroSection = () => {
           <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-4 sm:mb-0">
             <div 
               ref={heroImageRef}
-              className={`relative transition-all duration-[800ms] ease-out ${
+              className={`relative transition-all duration-[800ms] ease-out my-4 sm:my-0 ${
                 isHeroImageVisible
                   ? 'translate-x-0 opacity-100 scale-100'
                   : '-translate-x-16 opacity-0 scale-95'

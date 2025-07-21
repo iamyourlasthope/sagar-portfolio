@@ -15,10 +15,14 @@ interface SEOProps {
   tags?: string[];
 }
 
+const DEFAULT_TITLE = "Sagar Edits – Meme Marketer & Digital Creator";
+const DEFAULT_DESCRIPTION = "100K+ follower base | Viral content creator | Brand collaborations & meme marketing expert.";
+const DEFAULT_KEYWORDS = "Sagar Edits, Sagar Singh, Meme Marketer, Digital Creator, Content Creator, Instagram Influencer, YouTube Creator, Viral Memes, Brand Promotion, Video Editor, 100K YouTube Subscribers, 10K Instagram Followers, Social Media Marketing, Indian Meme Creator, Sagar Edits Portfolio, Influencer Marketing, Trending Reels, YouTube Shorts Creator, Instagram Reels Editor, Sagar Edits";
+
 const SEO: React.FC<SEOProps> = ({
-  title = "Sagar Singh - Meme Marketer & Digital Creator | 100K+ Followers",
-  description = "Professional meme marketer and digital content creator with 100K+ followers. Expert in viral content creation, video editing, and social media management.",
-  keywords = "Sagar Edits, Sagar Singh, meme marketer, digital creator, viral content, video editing, social media management, content creator, Instagram, YouTube",
+  title = DEFAULT_TITLE,
+  description = DEFAULT_DESCRIPTION,
+  keywords = DEFAULT_KEYWORDS,
   image = seoImage,
   url = "https://sagaredits.in/",
   type = "website",
