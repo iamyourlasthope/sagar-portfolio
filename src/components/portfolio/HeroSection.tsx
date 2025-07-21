@@ -149,7 +149,7 @@ const HeroSection = () => {
               <Button 
                 onClick={handleGetInTouch} 
                 variant="outline" 
-                className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 sm:px-8 lg:px-10 py-4 sm:py-6 lg:py-7 text-base sm:text-lg rounded-lg sm:rounded-2xl transition-all duration-300 shadow-lg bg-transparent touch-manipulation min-h-[52px] sm:min-h-[52px] w-full sm:w-auto"
+                className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 sm:px-8 lg:px-10 py-4 sm:py-6 lg:py-7 text-base sm:text-lg rounded-lg sm:rounded-2xl transition-all duration-300 shadow-lg bg-transparent touch-manipulation min-h-[52px] sm:min-h-[52px] w-full sm:w-auto mb-4 sm:mb-0"
                 aria-label="Contact Sagar Singh for collaborations"
               >
                 Get In Touch
